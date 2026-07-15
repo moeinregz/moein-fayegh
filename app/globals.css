@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-vazirmatn: "Vazirmatn", sans-serif;
+  --font-jetbrains: "JetBrains Mono", "Courier New", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0c16;
+  color: #eef1fa;
+  font-weight: 500;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #ffb454;
+  color: #1a1200;
+}
+
+/* code / latin content always reads LTR regardless of page language */
+.mono,
+.ltr {
+  font-family: var(--font-jetbrains);
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* faint dot-grid editor texture across the whole page */
+.dot-grid::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 26px 26px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* reveal-on-scroll utility */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
