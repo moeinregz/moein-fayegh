@@ -35,6 +35,16 @@ const PROJECTS = [
     descFa: "فروشگاه لباس با React، Node.js، Tailwind و TypeScript",
     descEn: "Clothing store built with React, Node.js, Tailwind and TypeScript",
   },
+  {
+    url: "https://web-pikaso.vercel.app/",
+    domain: "web-pikaso.vercel.app/",
+    initials: "WP",
+    gradient: "from-[#0F172A] to-[#0EA5E9]",
+    titleFa: "WebPikaso — شرکت برنامه نویسی",
+    titleEn: "WebPikaso — Programming Company",
+    descFa: "وبسایتی مینیمال با طرح امروزی با Node.js , React",
+    descEn: "A minimal website with modern design with Node.js , React",
+  }
 ];
 
 export default function Projects() {
