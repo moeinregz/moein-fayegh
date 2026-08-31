@@ -2,7 +2,6 @@
 
 import { useT } from "@/components/Providers";
 import RevealOnScroll from "@/components/RevealOnScroll";
-import ContactForm from "@/components/ContactForm";
 import { XMark } from "@/components/XMark";
 
 const CARDS = [
@@ -56,33 +55,49 @@ export default function Contact() {
           {t("پیامتون رو بفرستید، در سریع‌ترین زمان جواب می‌دم.", "Send a message and I'll get back to you quickly.")}
         </p>
 
-        <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-[0.9fr_1.1fr]">
-          <RevealOnScroll className="grid grid-cols-1 gap-3.5 xs:grid-cols-2">
-            {CARDS.map((c) => (
-              <a
-                key={c.en}
-                href={c.href}
-                target={c.href.startsWith("http") ? "_blank" : undefined}
-                rel="noopener noreferrer"
-                className="glass flex items-center gap-3 rounded-md2 p-[18px] transition-all hover:-translate-y-1 hover:border-blood/50 hover:shadow-liquidSm"
-              >
-                <div className="flex h-[38px] w-[38px] flex-none items-center justify-center rounded-[10px] bg-blood/[0.12]">
-                  <svg viewBox="0 0 24 24" className="h-[18px] w-[18px] fill-bloodBright">
-                    <path d={c.path} />
-                  </svg>
-                </div>
-                <div>
-                  <strong className="block text-[0.88rem]">{t(c.fa, c.en)}</strong>
-                  <span className="mono ltr text-[0.76rem] text-textFaint">{c.value}</span>
-                </div>
-              </a>
-            ))}
-          </RevealOnScroll>
+        <RevealOnScroll className="grid grid-cols-1 gap-3.5 xs:grid-cols-2 lg:grid-cols-4">
+          {CARDS.map((c) => (
+            <a
+              key={c.en}
+              href={c.href}
+              target={c.href.startsWith("http") ? "_blank" : undefined}
+              rel="noopener noreferrer"
+              className="glass flex items-center gap-3 rounded-md2 p-[18px] transition-all hover:-translate-y-1 hover:border-blood/50 hover:shadow-liquidSm"
+            >
+              <div className="flex h-[38px] w-[38px] flex-none items-center justify-center rounded-[10px] bg-blood/[0.12]">
+                <svg viewBox="0 0 24 24" className="h-[18px] w-[18px] fill-bloodBright">
+                  <path d={c.path} />
+                </svg>
+              </div>
+              <div>
+                <strong className="block text-[0.88rem]">{t(c.fa, c.en)}</strong>
+                <span className="mono ltr text-[0.76rem] text-textFaint">{c.value}</span>
+              </div>
+            </a>
+          ))}
+        </RevealOnScroll>
 
-          <RevealOnScroll>
-            <ContactForm />
-          </RevealOnScroll>
-        </div>
+        <RevealOnScroll className="glass-strong mt-10 flex flex-col items-center gap-5 rounded-lg2 p-8 text-center sm:flex-row sm:justify-between sm:text-right">
+          <div>
+            <h3 className="mb-1.5 text-[1.15rem] font-bold text-bone">
+              {t("سریع‌ترین راه؟ واتساپ", "Fastest way? WhatsApp")}
+            </h3>
+            <p className="text-[0.9rem] text-textDim">
+              {t(
+                "روی دکمه بزنید و مستقیم پیام بدید، معمولاً همون روز جواب می‌دم.",
+                "Tap the button and message me directly — I usually reply the same day."
+              )}
+            </p>
+          </div>
+          <a
+            href="https://wa.me/989965745535"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mono inline-flex flex-none items-center gap-2 rounded-sm2 bg-blood px-7 py-3.5 text-[0.92rem] font-extrabold text-bone transition-transform hover:-translate-y-0.5 hover:shadow-glowBlood"
+          >
+            $ send-message →
+          </a>
+        </RevealOnScroll>
       </div>
     </section>
   );

@@ -12,22 +12,22 @@ const FEATURED_PROJECTS = [
   {
     url: "https://asllmarket.ir/",
     domain: "asllmarket.ir",
-    initials: "AM",
-    gradient: "bg-[#22331a]",
-    titleFa: "اصل مارکت — فروشگاه اینترنتی",
-    titleEn: "Asll Market — Online Store",
-    descFa: "پلتفرم فروشگاهی با رابط کاربری اختصاصی و تجربه خرید روان",
-    descEn: "An e-commerce platform with a custom UI and smooth shopping experience",
+    image: "/projects/asl-market.png",
+    titleFa: "اصل مارکت — پلتفرم صادرات و واردات بین‌المللی",
+    titleEn: "Asl Market — International Import/Export Platform",
+    descFa:
+      "پلتفرمی برای اتصال تأمین‌کنندگان ایرانی به خریداران بین‌المللی و مدیریت فرآیند صادرات و واردات، با تمرکز ویژه بر تجارت با چین.",
+    descEn:
+      "A platform connecting Iranian suppliers to international buyers and managing the import/export process, with a special focus on trade with China.",
   },
   {
     url: "https://webpikasoo.vercel.app/",
     domain: "web-pikaso.vercel.app/",
-    initials: "WP",
-    gradient: "bg-[#123a4d]",
-    titleFa: "WebPikaso — شرکت برنامه نویسی",
-    titleEn: "WebPikaso — Programming Company",
-    descFa: "وبسایتی مینیمال با طرح امروزی با Node.js , React",
-    descEn: "A minimal website with modern design with Node.js , React",
+    image: "/projects/webpikaso.png",
+    titleFa: "WebPikaso — وبسایت شرکت برنامه‌نویسی",
+    titleEn: "WebPikaso — Programming Company Website",
+    descFa: "وبسایتی که برای این شرکت برنامه‌نویسی طراحی و توسعه دادم؛ طرحی مینیمال و امروزی با Node.js و React.",
+    descEn: "The website I designed and built for this software company — a minimal, modern design with Node.js and React.",
   },
 ];
 
@@ -313,8 +313,14 @@ export default function Projects() {
                   {p.domain}
                 </div>
               </div>
-              <div className={`flex h-[170px] items-center justify-center ${p.gradient}`}>
-                <span className="mono ltr text-[1.5rem] font-bold text-bone/55">{p.initials}</span>
+              <div className="h-[170px] overflow-hidden bg-steel/[0.03]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={p.image}
+                  alt={t(p.titleFa, p.titleEn)}
+                  loading="lazy"
+                  className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
               <div className="flex flex-1 flex-col p-5 pb-6">
                 <h3 className="mb-2 text-[1.12rem] font-bold">{t(p.titleFa, p.titleEn)}</h3>
