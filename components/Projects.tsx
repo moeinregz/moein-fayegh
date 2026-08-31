@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useT } from "@/components/Providers";
 import { Traffic } from "@/components/EditorBar";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import { XMark } from "@/components/XMark";
 
 const SAMPLE_PREVIEW_COUNT = 5;
 
@@ -279,13 +280,14 @@ export default function Projects() {
   return (
     <section id="projects" className="relative overflow-hidden py-[120px]">
       <div className="bg-hatch absolute inset-0" />
-      <div className="glow-blob -right-[100px] top-1/4 h-[400px] w-[400px] bg-white opacity-[.045]" />
+      <div className="glow-blob -right-[100px] top-1/4 h-[400px] w-[400px] bg-blood opacity-[.07]" />
       <div className="glow-blob -left-[140px] bottom-0 h-[380px] w-[380px] bg-white opacity-[.04]" />
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
         <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-white/80">
           ~/moein-fayegh/projects.tsx
         </span>
-        <h2 className="font-display heading-pop mb-3.5 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-white">
+        <h2 className="font-display heading-pop mb-3.5 flex items-center gap-3 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-white">
+          <XMark className="glow-blood h-6 w-6 flex-none text-bloodBright sm:h-8 sm:w-8" />
           {t("نمونه کارها", "Projects")}
         </h2>
         <p className="mb-10 max-w-[640px] text-textDim">
@@ -300,9 +302,9 @@ export default function Projects() {
               href={p.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group glass-strong relative flex flex-col overflow-hidden rounded-lg2 transition-all hover:-translate-y-1.5 hover:shadow-liquidBlood"
+              className="group glass-strong relative flex flex-col overflow-hidden rounded-lg2 transition-all hover:-translate-y-1.5 hover:shadow-liquid"
             >
-              <span className="mono absolute right-4 top-4 z-10 rounded-full border border-blood/70 bg-black/70 px-2.5 py-1 text-[0.7rem] font-bold text-white backdrop-blur">
+              <span className="mono absolute right-4 top-4 z-10 rounded-full border border-blood/60 bg-black/70 px-2.5 py-1 text-[0.7rem] font-bold text-bloodBright backdrop-blur">
                 {t("پروژه ویژه", "Featured")}
               </span>
               <div className="flex items-center gap-2.5 border-b border-line bg-white/[0.03] px-3.5 py-[11px]">
@@ -334,7 +336,7 @@ export default function Projects() {
               href={`/samples/${p.slug}.html`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group glass flex flex-col overflow-hidden rounded-lg2 transition-all hover:-translate-y-1.5 hover:border-blood/70 hover:shadow-glowBlood"
+              className="group glass flex flex-col overflow-hidden rounded-lg2 transition-all hover:-translate-y-1.5 hover:border-blood/50 hover:shadow-liquidSm"
             >
               <div className="flex items-center gap-2.5 border-b border-line bg-white/[0.03] px-3.5 py-[11px]">
                 <Traffic />
@@ -368,7 +370,7 @@ export default function Projects() {
             <button
               type="button"
               onClick={() => setShowAll(true)}
-              className="mono glass inline-flex items-center gap-2 rounded-sm2 px-7 py-3.5 text-[0.9rem] font-extrabold text-text transition-colors hover:border-blood/70 hover:text-white"
+              className="mono glass inline-flex items-center gap-2 rounded-sm2 px-7 py-3.5 text-[0.9rem] font-extrabold text-text transition-colors hover:border-blood/60 hover:text-bloodBright"
             >
               {t(
                 `مشاهده همه (${SAMPLE_PROJECTS.length})`,

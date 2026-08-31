@@ -14,16 +14,17 @@ const config: Config = {
         panel3: "#161616",
         line: "rgba(255,255,255,.16)",
         lineSoft: "rgba(255,255,255,.08)",
-        rose: "#ff3355",
+        rose: "#ff2d47",
         text: "#ffffff",
         textDim: "#b7b7c2",
         textFaint: "#6a6a75",
-        // signature accent — pulled from the reference character art:
-        // blood-red against black/silver, used sparingly for emphasis
-        blood: "#b3122a",
-        bloodBright: "#ff3355",
-        bloodDim: "rgba(179,18,42,.35)",
-        // legacy aliases kept so nothing silently breaks — everything reads as white now
+        // accent palette — blood red / bone white / ink black, pulled from the
+        // character reference: crimson sleeve + claws, white-grey hair & coat, black base
+        blood: "#c31432",
+        bloodBright: "#ff2440",
+        bloodDeep: "#7a0d20",
+        bone: "#e9e6e0",
+        // legacy aliases kept so nothing silently breaks
         amber: "#ffffff",
         mint: "#ffffff",
         violet: "#ffffff",
@@ -46,9 +47,9 @@ const config: Config = {
         liquidSm:
           "0 10px 26px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.3)",
         glowWhite: "0 0 50px rgba(255,255,255,.14)",
-        glowBlood: "0 0 40px rgba(179,18,42,.4)",
+        glowBlood: "0 0 50px rgba(195,20,50,.35)",
         liquidBlood:
-          "0 24px 60px rgba(0,0,0,.65), inset 0 1px 0 rgba(255,255,255,.25), 0 0 0 1px rgba(179,18,42,.35), 0 0 34px rgba(179,18,42,.25)",
+          "0 24px 60px rgba(0,0,0,.6), 0 0 0 1px rgba(195,20,50,.18), inset 0 1px 0 rgba(255,255,255,.25)",
       },
       keyframes: {
         blink: { "50%": { opacity: "0" } },
@@ -57,11 +58,16 @@ const config: Config = {
           "0%,100%": { opacity: "0.5", transform: "translateY(0) scale(1)" },
           "50%": { opacity: "0.9", transform: "translateY(-14px) scale(1.05)" },
         },
+        pulseGlow: {
+          "0%,100%": { opacity: "0.65" },
+          "50%": { opacity: "1" },
+        },
       },
       animation: {
         blink: "blink 1s steps(1) infinite",
         termIn: "termIn .45s ease forwards",
         driftGlow: "driftGlow 7s ease-in-out infinite",
+        pulseGlow: "pulseGlow 2.4s ease-in-out infinite",
       },
     },
   },

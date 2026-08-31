@@ -16,7 +16,7 @@ export default function TopButton() {
       type="button"
       aria-label="برو بالا"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className={`glass fixed bottom-[26px] end-[26px] z-[400] flex h-[46px] w-[46px] items-center justify-center rounded-full transition-all hover:border-blood/70 hover:shadow-glowBlood ${
+      className={`glass fixed bottom-[26px] end-[26px] z-[400] flex h-[46px] w-[46px] items-center justify-center rounded-full transition-all hover:border-blood/60 hover:shadow-glowBlood ${
         show ? "opacity-100" : "pointer-events-none opacity-0"
       }`}
     >

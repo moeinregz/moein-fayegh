@@ -8,7 +8,9 @@ html {
 }
 
 body {
-  background: #000000;
+  /* faint blood-red vignette over black — mostly dark, red only where it should breathe */
+  background: radial-gradient(ellipse 130% 55% at 50% -12%, rgba(195, 20, 50, 0.16), transparent 60%),
+    radial-gradient(ellipse 90% 45% at 8% 108%, rgba(195, 20, 50, 0.1), transparent 60%), #000000;
   color: #ffffff;
   font-weight: 600;
   line-height: 1.8;
@@ -16,8 +18,27 @@ body {
 }
 
 ::selection {
-  background: #ffffff;
-  color: #000000;
+  background: #c31432;
+  color: #ffffff;
+}
+
+/* thin blood-red scrollbar, matte black track */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #7a0d20;
+  border-radius: 999px;
+  border: 2px solid #000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c31432;
+}
+html {
+  scrollbar-color: #7a0d20 #000;
 }
 
 /* code / latin content always reads LTR regardless of page language */
@@ -136,43 +157,16 @@ body {
   opacity: 0.7;
 }
 .section-divider::before {
-  content: "×";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: auto;
-  height: auto;
-  font-family: var(--font-jetbrains), monospace;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1;
-  color: #ff3355;
-  text-shadow: 0 0 14px rgba(255, 51, 85, 0.85), 0 0 30px rgba(255, 51, 85, 0.4);
-  transform: translate(-50%, -56%);
-}
-
-/* ---------- signature × watermark — echoes the crossed-eye motif, used sparingly ---------- */
-.x-mark {
-  position: absolute;
-  pointer-events: none;
-  z-index: 0;
-}
-.x-mark::before,
-.x-mark::after {
   content: "";
   position: absolute;
-  top: 50%;
   left: 50%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(255, 51, 85, 0.55), transparent);
-  filter: blur(0.5px);
-}
-.x-mark::before {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-.x-mark::after {
-  transform: translate(-50%, -50%) rotate(-45deg);
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #ff2440;
+  box-shadow: 0 0 16px 4px rgba(255, 36, 64, 0.8), 0 0 34px 12px rgba(195, 20, 50, 0.35);
+  transform: translate(-50%, -50%);
 }
 
 /* ---------- distinctive section backgrounds (monochrome, subtle) ---------- */
@@ -224,6 +218,7 @@ body {
   pointer-events: none;
   filter: blur(100px);
   z-index: 0;
+  background: #ffffff;
 }
 
 /* ---------- flat / matte heading treatment (no text-shadow) ---------- */
@@ -254,4 +249,19 @@ body {
 .tk-comment {
   color: #8b949e;
   font-style: italic;
+}
+
+/* ---------- crimson X-mark motif (from the reference art's crossed eye scars) ----------
+   Used as a watermark behind the hero name and as small accents before headings. */
+.x-watermark {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  color: #ff2440;
+  opacity: 0.12;
+  filter: drop-shadow(0 0 40px rgba(195, 20, 50, 0.55));
+}
+
+.glow-blood {
+  filter: drop-shadow(0 0 6px rgba(255, 36, 64, 0.85));
 }

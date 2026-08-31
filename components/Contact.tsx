@@ -3,6 +3,7 @@
 import { useT } from "@/components/Providers";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import ContactForm from "@/components/ContactForm";
+import { XMark } from "@/components/XMark";
 
 const CARDS = [
   {
@@ -40,12 +41,12 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative overflow-hidden py-[120px]">
-      <div className="bg-spotlight absolute inset-0" />
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
         <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-white/80">
           ~/moein-fayegh/contact.sh
         </span>
-        <h2 className="font-display heading-pop mb-3.5 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-white">
+        <h2 className="font-display heading-pop mb-3.5 flex items-center gap-3 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-white">
+          <XMark className="glow-blood h-6 w-6 flex-none text-bloodBright sm:h-8 sm:w-8" />
           {t("بیا همکاری کنیم", "Let's Work Together")}
         </h2>
         <p className="mb-12 max-w-[640px] text-textDim">
@@ -60,10 +61,10 @@ export default function Contact() {
                 href={c.href}
                 target={c.href.startsWith("http") ? "_blank" : undefined}
                 rel="noopener noreferrer"
-                className="group glass flex items-center gap-3 rounded-md2 p-[18px] transition-all hover:-translate-y-1 hover:border-blood/70 hover:shadow-glowBlood"
+                className="glass flex items-center gap-3 rounded-md2 p-[18px] transition-all hover:-translate-y-1 hover:border-blood/50 hover:shadow-liquidSm"
               >
-                <div className="flex h-[38px] w-[38px] flex-none items-center justify-center rounded-[10px] bg-white/[0.06] transition-colors group-hover:bg-bloodDim">
-                  <svg viewBox="0 0 24 24" className="h-[18px] w-[18px] fill-white">
+                <div className="flex h-[38px] w-[38px] flex-none items-center justify-center rounded-[10px] bg-blood/[0.12]">
+                  <svg viewBox="0 0 24 24" className="h-[18px] w-[18px] fill-bloodBright">
                     <path d={c.path} />
                   </svg>
                 </div>

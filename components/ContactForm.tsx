@@ -83,7 +83,7 @@ export default function ContactForm() {
           name="name"
           required
           placeholder={t("نام شما", "Your name")}
-          className="w-full rounded-sm2 border border-line bg-black/60 px-3.5 py-3 text-[0.95rem] text-text transition-colors focus:border-blood/70 focus:outline-none focus:shadow-glowBlood"
+          className="w-full rounded-sm2 border border-line bg-black/60 px-3.5 py-3 text-[0.95rem] text-text transition-colors focus:border-blood/60 focus:outline-none focus:shadow-liquidSm"
         />
       </Field>
 
@@ -93,7 +93,7 @@ export default function ContactForm() {
           name="phone"
           required
           placeholder={t("شماره تماس", "Phone number")}
-          className="w-full rounded-sm2 border border-line bg-black/60 px-3.5 py-3 text-[0.95rem] text-text transition-colors focus:border-blood/70 focus:outline-none focus:shadow-glowBlood"
+          className="w-full rounded-sm2 border border-line bg-black/60 px-3.5 py-3 text-[0.95rem] text-text transition-colors focus:border-blood/60 focus:outline-none focus:shadow-liquidSm"
         />
       </Field>
 
@@ -102,7 +102,7 @@ export default function ContactForm() {
           type="email"
           name="email"
           placeholder={t("ایمیل", "Email")}
-          className="w-full rounded-sm2 border border-line bg-black/60 px-3.5 py-3 text-[0.95rem] text-text transition-colors focus:border-blood/70 focus:outline-none focus:shadow-glowBlood"
+          className="w-full rounded-sm2 border border-line bg-black/60 px-3.5 py-3 text-[0.95rem] text-text transition-colors focus:border-blood/60 focus:outline-none focus:shadow-liquidSm"
         />
       </Field>
 
@@ -112,14 +112,14 @@ export default function ContactForm() {
           required
           rows={4}
           placeholder={t("درباره پروژه‌تون بگید...", "Tell me about your project...")}
-          className="w-full resize-y rounded-sm2 border border-line bg-black/60 px-3.5 py-3 text-[0.95rem] text-text transition-colors focus:border-blood/70 focus:outline-none focus:shadow-glowBlood"
+          className="w-full resize-y rounded-sm2 border border-line bg-black/60 px-3.5 py-3 text-[0.95rem] text-text transition-colors focus:border-blood/60 focus:outline-none focus:shadow-liquidSm"
         />
       </Field>
 
       <button
         type="submit"
         disabled={status === "sending"}
-        className="mono mt-1.5 w-full rounded-sm2 bg-white py-3.5 text-[0.92rem] font-extrabold text-black transition-transform hover:-translate-y-0.5 hover:shadow-liquidBlood disabled:cursor-not-allowed disabled:opacity-60"
+        className="mono mt-1.5 w-full rounded-sm2 bg-gradient-to-r from-blood to-bloodBright py-3.5 text-[0.92rem] font-extrabold text-white transition-transform hover:-translate-y-0.5 hover:shadow-glowBlood disabled:cursor-not-allowed disabled:opacity-60"
       >
         {status === "sending" ? t("در حال ارسال...", "Sending...") : "$ send-request"}
       </button>

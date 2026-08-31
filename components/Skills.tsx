@@ -2,6 +2,7 @@
 
 import { useT } from "@/components/Providers";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import { XMark } from "@/components/XMark";
 
 const STACK = [
   { name: "HTML5", fa: "ساختاردهی معنایی و استاندارد صفحات وب", en: "Semantic, standards-based markup for web pages" },
@@ -51,12 +52,13 @@ export default function Skills() {
     <section id="skills" className="relative overflow-hidden py-[120px]">
       <div className="section-divider absolute inset-x-0 top-0" />
       <div className="bg-blueprint absolute inset-0" />
-      <div className="glow-blob -left-[120px] bottom-0 h-[420px] w-[420px] bg-white opacity-[.05]" />
+      <div className="glow-blob -left-[120px] bottom-0 h-[420px] w-[420px] bg-blood opacity-[.08]" />
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
         <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-white/80">
           ~/moein-fayegh/skills.json
         </span>
-        <h2 className="font-display heading-pop mb-3.5 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-white">
+        <h2 className="font-display heading-pop mb-3.5 flex items-center gap-3 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-white">
+          <XMark className="glow-blood h-6 w-6 flex-none text-bloodBright sm:h-8 sm:w-8" />
           {t("مهارت‌ها و تخصص‌ها", "Skills & Expertise")}
         </h2>
         <p className="mb-12 max-w-[640px] text-textDim">
@@ -143,7 +145,6 @@ export default function Skills() {
 function GroupLabel({ text }: { text: string }) {
   return (
     <div className="mono ltr mb-4 flex items-center gap-2.5 text-[0.82rem] text-textFaint">
-      <span className="h-1 w-1 flex-none rounded-full bg-bloodBright shadow-[0_0_6px_1px_rgba(255,51,85,.6)]" />
       {text}
       <span className="h-px flex-1 bg-line" />
     </div>
@@ -152,9 +153,9 @@ function GroupLabel({ text }: { text: string }) {
 
 function SkillCard({ name, desc }: { name: string; desc: string }) {
   return (
-    <div className="glass rounded-md2 p-4 pb-[18px] transition-all hover:-translate-y-1 hover:border-blood/70 hover:shadow-glowBlood sm:p-5 sm:pb-[22px]">
+    <div className="glass rounded-md2 p-4 pb-[18px] transition-all hover:-translate-y-1 hover:border-blood/50 hover:shadow-liquidSm sm:p-5 sm:pb-[22px]">
       <h4 className="mb-2 flex items-center gap-2 text-[0.92rem] font-bold sm:text-[1.02rem]">
-        <span className="h-2 w-2 flex-none rounded-sm bg-bloodBright shadow-[0_0_6px_1px_rgba(255,51,85,.6)]" />
+        <XMark className="glow-blood h-3 w-3 flex-none text-bloodBright" />
         {name}
       </h4>
       <p className="text-[0.8rem] text-textDim sm:text-[0.87rem]">{desc}</p>

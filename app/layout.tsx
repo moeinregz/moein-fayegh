@@ -33,6 +33,10 @@ export const metadata: Metadata = {
   title: "معین فایق — توسعه‌دهنده فول‌استک",
   description:
     "معین فایق، توسعه‌دهنده فول‌استک با تخصص در React، Next.js، Node.js، وردپرس و سئو.",
+  icons: {
+    icon:
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23000'/%3E%3Ccircle cx='50' cy='50' r='47' fill='none' stroke='%23c31432' stroke-width='2'/%3E%3Cpath d='M30 30L70 70M70 30L30 70' stroke='%23ff2440' stroke-width='9' stroke-linecap='round'/%3E%3C/svg%3E",
+  },
 };
 
 export default function RootLayout({

@@ -3,6 +3,7 @@
 import { useT } from "@/components/Providers";
 import { Traffic } from "@/components/EditorBar";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import { XMark } from "@/components/XMark";
 
 const DEPS = [
   ["react", "^18.x"],
@@ -20,14 +21,14 @@ export default function About() {
   return (
     <section id="about" className="relative overflow-hidden py-[120px]">
       <div className="bg-scanlines absolute inset-0" />
-      <div className="glow-blob -left-[160px] top-1/3 h-[420px] w-[420px] bg-white opacity-[.05]" />
-      <div className="x-mark absolute -left-10 bottom-0 h-[200px] w-[200px] opacity-[.22] sm:left-2" />
+      <div className="glow-blob -left-[160px] top-1/3 h-[420px] w-[420px] bg-blood opacity-[.08]" />
 
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
         <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-white/80">
           ~/moein-fayegh/about.tsx
         </span>
-        <h2 className="font-display heading-pop mb-3.5 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-white">
+        <h2 className="font-display heading-pop mb-3.5 flex items-center gap-3 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-white">
+          <XMark className="glow-blood h-6 w-6 flex-none text-bloodBright sm:h-8 sm:w-8" />
           {t("درباره من", "About Me")}
         </h2>
 
