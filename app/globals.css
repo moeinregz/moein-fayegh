@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-vazirmatn: "Vazirmatn", sans-serif;
-  --font-lalezar: "Lalezar", "Vazirmatn", sans-serif;
-  --font-jetbrains: "JetBrains Mono", "Courier New", monospace;
-}
-
 html {
   scroll-behavior: smooth;
   background: #000;
@@ -154,6 +148,48 @@ body {
   transform: translate(-50%, -50%);
 }
 
+/* ---------- distinctive section backgrounds (monochrome, subtle) ---------- */
+
+/* blueprint-style fine grid — used behind the Skills section */
+.bg-blueprint {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+}
+
+/* diagonal hatch — used behind the Projects section */
+.bg-hatch {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0px,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px,
+    transparent 26px
+  );
+  -webkit-mask-image: radial-gradient(ellipse 75% 55% at 50% 100%, #000 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 75% 55% at 50% 100%, #000 40%, transparent 100%);
+}
+
+/* soft top-down spotlight — used behind Contact */
+.bg-spotlight {
+  background-image: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(255, 255, 255, 0.09), transparent 70%);
+}
+
+/* faint scanlines — pairs well with the terminal-colored panel in About */
+.bg-scanlines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.035) 0px,
+    rgba(255, 255, 255, 0.035) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 15% 40%, #000 30%, transparent 100%);
+  mask-image: radial-gradient(ellipse 70% 60% at 15% 40%, #000 30%, transparent 100%);
+}
+
 /* ---------- soft ambient blobs used inside sections (monochrome only) ---------- */
 .glow-blob {
   position: absolute;
@@ -164,12 +200,32 @@ body {
   background: #ffffff;
 }
 
-/* ---------- puffy / embossed heading treatment ---------- */
+/* ---------- flat / matte heading treatment (no text-shadow) ---------- */
 .heading-pop {
-  text-shadow: 0 2px 30px rgba(255, 255, 255, 0.22), 0 2px 0 rgba(255, 255, 255, 0.06);
+  text-shadow: none;
 }
 
 .text-outline {
   -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.9);
   color: transparent;
+}
+
+/* ---------- real terminal / editor syntax colors ----------
+   Used only inside the About "package.json" panel — the one place
+   we want an actual colorized terminal instead of the monochrome UI. */
+.tk-key {
+  color: #79c0ff; /* property names — editor blue */
+}
+.tk-str {
+  color: #a5d6a7; /* string values — terminal green */
+}
+.tk-punc {
+  color: #6e7681; /* braces, colons, commas — dim gray */
+}
+.tk-num {
+  color: #ffab70; /* version numbers — orange */
+}
+.tk-comment {
+  color: #8b949e;
+  font-style: italic;
 }

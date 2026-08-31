@@ -1,8 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { useT } from "@/components/Providers";
 import { Traffic } from "@/components/EditorBar";
 import RevealOnScroll from "@/components/RevealOnScroll";
+
+const SAMPLE_PREVIEW_COUNT = 5;
 
 const FEATURED_PROJECTS = [
   {
@@ -270,9 +273,12 @@ const SAMPLE_PROJECTS = [
 
 export default function Projects() {
   const t = useT();
+  const [showAll, setShowAll] = useState(false);
+  const visibleSamples = showAll ? SAMPLE_PROJECTS : SAMPLE_PROJECTS.slice(0, SAMPLE_PREVIEW_COUNT);
 
   return (
     <section id="projects" className="relative overflow-hidden py-[120px]">
+      <div className="bg-hatch absolute inset-0" />
       <div className="glow-blob -right-[100px] top-1/4 h-[400px] w-[400px] bg-white opacity-[.045]" />
       <div className="glow-blob -left-[140px] bottom-0 h-[380px] w-[380px] bg-white opacity-[.04]" />
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
@@ -322,7 +328,7 @@ export default function Projects() {
 
         {/* Sample project gallery */}
         <RevealOnScroll className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {SAMPLE_PROJECTS.map((p) => (
+          {visibleSamples.map((p) => (
             <a
               key={p.slug}
               href={`/samples/${p.slug}.html`}
@@ -356,6 +362,21 @@ export default function Projects() {
             </a>
           ))}
         </RevealOnScroll>
+
+        {!showAll && SAMPLE_PROJECTS.length > SAMPLE_PREVIEW_COUNT && (
+          <div className="mt-10 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowAll(true)}
+              className="mono glass inline-flex items-center gap-2 rounded-sm2 px-7 py-3.5 text-[0.9rem] font-extrabold text-text transition-colors hover:border-white/50 hover:text-white"
+            >
+              {t(
+                `مشاهده همه (${SAMPLE_PROJECTS.length})`,
+                `View All (${SAMPLE_PROJECTS.length})`
+              )}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

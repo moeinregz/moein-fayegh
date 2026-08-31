@@ -50,6 +50,7 @@ export default function Skills() {
   return (
     <section id="skills" className="relative overflow-hidden py-[120px]">
       <div className="section-divider absolute inset-x-0 top-0" />
+      <div className="bg-blueprint absolute inset-0" />
       <div className="glow-blob -left-[120px] bottom-0 h-[420px] w-[420px] bg-white opacity-[.05]" />
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
         <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-white/80">
@@ -68,7 +69,7 @@ export default function Skills() {
         <div className="flex flex-col gap-14">
           <RevealOnScroll>
             <GroupLabel text="01 · frontend & backend" />
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
               {STACK.map((s) => (
                 <SkillCard key={s.name} name={s.name} desc={t(s.fa, s.en)} />
               ))}
@@ -77,7 +78,7 @@ export default function Skills() {
 
           <RevealOnScroll>
             <GroupLabel text="02 · wordpress & ecommerce" />
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
               {WP.map((s) => (
                 <SkillCard key={s.name} name={s.name} desc={t(s.fa, s.en)} />
               ))}
@@ -110,7 +111,7 @@ export default function Skills() {
                 "UI/UX design and end-to-end Frontend and Backend development with database integration, plus deployment and version-control tooling."
               )}
             </p>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
               {DEVOPS.map((s) => (
                 <SkillCard key={s.name} name={s.name} desc={t(s.fa, s.en)} />
               ))}
@@ -150,12 +151,12 @@ function GroupLabel({ text }: { text: string }) {
 
 function SkillCard({ name, desc }: { name: string; desc: string }) {
   return (
-    <div className="glass rounded-md2 p-5 pb-[22px] transition-all hover:-translate-y-1 hover:border-white/50 hover:shadow-liquidSm">
-      <h4 className="mb-2 flex items-center gap-2 text-[1.02rem] font-bold">
+    <div className="glass rounded-md2 p-4 pb-[18px] transition-all hover:-translate-y-1 hover:border-white/50 hover:shadow-liquidSm sm:p-5 sm:pb-[22px]">
+      <h4 className="mb-2 flex items-center gap-2 text-[0.92rem] font-bold sm:text-[1.02rem]">
         <span className="h-2 w-2 flex-none rounded-sm bg-white" />
         {name}
       </h4>
-      <p className="text-[0.87rem] text-textDim">{desc}</p>
+      <p className="text-[0.8rem] text-textDim sm:text-[0.87rem]">{desc}</p>
     </div>
   );
 }

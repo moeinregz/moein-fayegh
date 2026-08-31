@@ -19,6 +19,7 @@ export default function About() {
 
   return (
     <section id="about" className="relative overflow-hidden py-[120px]">
+      <div className="bg-scanlines absolute inset-0" />
       <div className="glow-blob -left-[160px] top-1/3 h-[420px] w-[420px] bg-white opacity-[.05]" />
 
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
@@ -56,28 +57,29 @@ export default function About() {
               <Traffic />
               <span className="mono ms-1 text-[0.78rem] text-textDim">package.json</span>
             </div>
-            <div className="mono ltr px-6 py-[26px] text-[0.85rem] leading-[1.95] text-textDim">
-              {"{"}
+            <div className="mono ltr px-6 py-[26px] text-[0.85rem] leading-[1.95]">
+              <span className="tk-punc">{"{"}</span>
               <br />
-              &nbsp;&nbsp;<span className="text-white">&quot;name&quot;</span>
-              <span className="text-textFaint">:</span>{" "}
-              <span className="text-white">&quot;moein-fayegh&quot;</span>,
+              &nbsp;&nbsp;<span className="tk-key">&quot;name&quot;</span>
+              <span className="tk-punc">:</span>{" "}
+              <span className="tk-str">&quot;moein-fayegh&quot;</span>
+              <span className="tk-punc">,</span>
               <br />
-              &nbsp;&nbsp;<span className="text-white">&quot;dependencies&quot;</span>
-              <span className="text-textFaint">:</span> {"{"}
+              &nbsp;&nbsp;<span className="tk-key">&quot;dependencies&quot;</span>
+              <span className="tk-punc">:</span> <span className="tk-punc">{"{"}</span>
               <br />
               {DEPS.map(([key, val], i) => (
                 <div key={key}>
                   &nbsp;&nbsp;&nbsp;&nbsp;
-                  <span className="text-white">&quot;{key}&quot;</span>
-                  <span className="text-textFaint">:</span>{" "}
-                  <span className="text-white">&quot;{val}&quot;</span>
-                  {i < DEPS.length - 1 ? "," : ""}
+                  <span className="tk-key">&quot;{key}&quot;</span>
+                  <span className="tk-punc">:</span>{" "}
+                  <span className="tk-num">&quot;{val}&quot;</span>
+                  {i < DEPS.length - 1 ? <span className="tk-punc">,</span> : ""}
                 </div>
               ))}
-              &nbsp;&nbsp;{"}"}
+              &nbsp;&nbsp;<span className="tk-punc">{"}"}</span>
               <br />
-              {"}"}
+              <span className="tk-punc">{"}"}</span>
             </div>
           </RevealOnScroll>
         </div>
