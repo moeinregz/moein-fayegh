@@ -1,7 +1,7 @@
 "use client";
 
 import { useT } from "@/components/Providers";
-import { Traffic } from "@/components/EditorBar";
+
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { XMark } from "@/components/XMark";
 
@@ -57,7 +57,6 @@ export default function About() {
 
           <RevealOnScroll className="glass overflow-hidden rounded-lg2">
             <div className="flex items-center gap-2.5 border-b border-line bg-steel/[0.03] px-4 py-3">
-              <Traffic />
               <span className="mono ms-1 text-[0.78rem] text-textDim">package.json</span>
             </div>
             <div className="mono ltr px-6 py-[26px] text-[0.85rem] leading-[1.95]">

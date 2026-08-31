@@ -1,7 +1,6 @@
 "use client";
 
 import { useLanguage, useT } from "@/components/Providers";
-import { Traffic } from "@/components/EditorBar";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { XMark } from "@/components/XMark";
 import SwingBadge from "@/components/hero/SwingBadge";
@@ -66,7 +65,7 @@ export default function Hero() {
             {/* spec sheet — replaces the terminal panel */}
             <RevealOnScroll className="glass-strong overflow-hidden rounded-lg2">
               <div className="flex items-center gap-2.5 border-b border-steel/20 bg-steel/[0.03] px-4 py-3">
-                <Traffic />
+
                 <span className="mono ms-1 text-[0.78rem] text-textDim">spec.json</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2">

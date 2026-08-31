@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useT } from "@/components/Providers";
-import { Traffic } from "@/components/EditorBar";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { XMark } from "@/components/XMark";
 
@@ -308,7 +307,7 @@ export default function Projects() {
                 {t("پروژه ویژه", "Featured")}
               </span>
               <div className="flex items-center gap-2.5 border-b border-line bg-steel/[0.03] px-3.5 py-[11px]">
-                <Traffic />
+
                 <div className="mono ltr flex-1 overflow-hidden text-ellipsis whitespace-nowrap rounded-full bg-black px-3 py-1.5 text-[0.76rem] text-textFaint">
                   {p.domain}
                 </div>
@@ -345,7 +344,7 @@ export default function Projects() {
               className="group glass flex flex-col overflow-hidden rounded-lg2 transition-all hover:-translate-y-1.5 hover:border-blood/50 hover:shadow-liquidSm"
             >
               <div className="flex items-center gap-2.5 border-b border-line bg-steel/[0.03] px-3.5 py-[11px]">
-                <Traffic />
+
                 <div className="mono ltr flex-1 overflow-hidden text-ellipsis whitespace-nowrap rounded-full bg-black px-3 py-1.5 text-[0.76rem] text-textFaint">
                   {p.slug}.html
                 </div>
