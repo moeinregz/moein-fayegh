@@ -156,7 +156,7 @@ export default function SwingBadge() {
             ref={cardRef}
             onPointerDown={onPointerDown}
             onPointerEnter={() => (hovering.current = true)}
-            className="glass-strong will-change-transform mt-1 w-[220px] h-auto cursor-grab select-none overflow-hidden rounded-lg2 shadow-liquid active:cursor-grabbing sm:w-[300px]"
+            className="glass-strong will-change-transform mt-1 w-[220px] h-auto cursor-grab select-none overflow-hidden rounded-lg2 shadow-liquid active:cursor-grabbing sm:w-[340px]"
             style={{ transformStyle: "preserve-3d" }}
           >
             {/* punch hole */}
