@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import { useLanguage, useT } from "@/components/Providers";
 
 const TABS = [
-  { id: "hero", fa: "خانه", en: "Home", ext: "tsx", extColor: "text-violet" },
-  { id: "about", fa: "درباره من", en: "About", ext: "tsx", extColor: "text-violet" },
-  { id: "experience", fa: "سابقه کاری", en: "Experience", ext: "log", extColor: "text-mint" },
-  { id: "skills", fa: "مهارت‌ها", en: "Skills", ext: "json", extColor: "text-amber" },
-  { id: "projects", fa: "نمونه کار", en: "Projects", ext: "tsx", extColor: "text-violet" },
-  { id: "contact", fa: "تماس", en: "Contact", ext: "sh", extColor: "text-mint" },
+  { id: "hero", fa: "خانه", en: "Home", ext: "tsx" },
+  { id: "about", fa: "درباره من", en: "About", ext: "tsx" },
+  { id: "experience", fa: "سابقه کاری", en: "Experience", ext: "log" },
+  { id: "skills", fa: "مهارت‌ها", en: "Skills", ext: "json" },
+  { id: "projects", fa: "نمونه کار", en: "Projects", ext: "tsx" },
+  { id: "contact", fa: "تماس", en: "Contact", ext: "sh" },
 ] as const;
 
 type TabId = (typeof TABS)[number]["id"];
@@ -18,6 +18,7 @@ export default function EditorBar() {
   const t = useT();
   const { toggleLang, lang } = useLanguage();
   const [active, setActive] = useState<TabId>("hero");
+  const [docked, setDocked] = useState(false);
 
   useEffect(() => {
     const sections = TABS.map((tab) => document.getElementById(tab.id));
@@ -28,6 +29,7 @@ export default function EditorBar() {
         if (sec && sec.offsetTop <= y) current = TABS[i].id;
       });
       setActive(current);
+      setDocked(window.scrollY > 24);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
@@ -35,8 +37,18 @@ export default function EditorBar() {
   }, []);
 
   return (
-    <div className="fixed inset-x-0 top-0 z-[500] border-b border-line bg-ink/80 backdrop-blur-2xl">
-      <div className="mx-auto flex h-14 max-w-[1180px] items-center gap-[22px] px-5">
+    <div
+      className={`fixed inset-x-0 top-0 z-[500] flex justify-center transition-all duration-500 ease-out ${
+        docked ? "px-3 pt-3 sm:px-6 sm:pt-4" : "px-0 pt-0"
+      }`}
+    >
+      <div
+        className={`flex w-full items-center gap-[22px] transition-all duration-500 ease-out ${
+          docked
+            ? "glass max-w-[900px] rounded-full px-4 shadow-glow sm:px-6"
+            : "max-w-none rounded-none border-b border-line bg-black/70 px-5 backdrop-blur-2xl"
+        } h-14`}
+      >
         <Traffic />
 
         <div className="flex flex-1 gap-0.5 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -44,15 +56,25 @@ export default function EditorBar() {
             <a
               key={tab.id}
               href={`#${tab.id}`}
-              className={`flex h-14 flex-none items-center gap-[7px] whitespace-nowrap border-b-2 px-4 text-[0.86rem] transition-colors ${
+              className={`flex h-14 flex-none items-center gap-[7px] whitespace-nowrap px-4 text-[0.86rem] font-bold transition-colors ${
+                docked ? "" : "border-b-2"
+              } ${
                 active === tab.id
-                  ? "border-amber text-text"
-                  : "border-transparent text-textDim hover:bg-white/[0.03] hover:text-text"
+                  ? docked
+                    ? "text-neon"
+                    : "border-neon text-text"
+                  : docked
+                  ? "text-textDim hover:text-text"
+                  : "border-transparent text-textDim hover:bg-white/[0.04] hover:text-text"
               }`}
             >
-              <span className="h-1.5 w-1.5 flex-none rounded-full bg-textFaint" />
+              <span
+                className={`h-1.5 w-1.5 flex-none rounded-full ${
+                  active === tab.id ? "bg-neon shadow-[0_0_8px_2px_var(--neon)]" : "bg-textFaint"
+                }`}
+              />
               <span>{t(tab.fa, tab.en)}</span>
-              <span className={`mono text-[0.78rem] ${tab.extColor}`}>.{tab.ext}</span>
+              <span className="mono text-[0.78rem] text-neon">.{tab.ext}</span>
             </a>
           ))}
         </div>
@@ -61,7 +83,7 @@ export default function EditorBar() {
           onClick={toggleLang}
           type="button"
           aria-label="تغییر زبان"
-          className="mono flex flex-none items-center gap-1.5 rounded-full border border-line bg-panel px-3.5 py-1.5 text-[0.78rem] font-bold text-text transition-colors hover:border-amber hover:text-amber"
+          className="mono flex flex-none items-center gap-1.5 rounded-full border border-line bg-white/5 px-3.5 py-1.5 text-[0.78rem] font-bold text-text transition-colors hover:border-neon hover:text-neon"
         >
           <span aria-hidden>🌐</span>
           <span>{lang === "fa" ? "EN" : "فا"}</span>
@@ -74,9 +96,9 @@ export default function EditorBar() {
 export function Traffic() {
   return (
     <div className="ltr flex flex-none gap-[7px]">
-      <span className="block h-[11px] w-[11px] rounded-full bg-[#ff5f57]" />
-      <span className="block h-[11px] w-[11px] rounded-full bg-[#febc2e]" />
-      <span className="block h-[11px] w-[11px] rounded-full bg-[#28c840]" />
+      <span className="block h-[11px] w-[11px] rounded-full border border-white/20 bg-white" />
+      <span className="block h-[11px] w-[11px] rounded-full border border-white/20 bg-white/60" />
+      <span className="block h-[11px] w-[11px] rounded-full border border-neon/60 bg-neon" />
     </div>
   );
 }

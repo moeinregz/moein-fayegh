@@ -272,12 +272,15 @@ export default function Projects() {
   const t = useT();
 
   return (
-    <section id="projects" className="relative py-[110px]">
-      <div className="mx-auto max-w-[1180px] px-6">
-        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-amber">
+    <section id="projects" className="relative overflow-hidden py-[120px]">
+      <div className="section-divider absolute inset-x-0 top-0" />
+      <div className="glow-blob -right-[100px] top-1/4 h-[400px] w-[400px] bg-neon opacity-[.16]" />
+      <div className="glow-blob -left-[140px] bottom-0 h-[380px] w-[380px] bg-neon2 opacity-[.14]" />
+      <div className="relative z-10 mx-auto max-w-[1180px] px-6">
+        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-neon">
           ~/moein-fayegh/projects.tsx
         </span>
-        <h2 className="mb-3.5 text-[clamp(1.7rem,3.4vw,2.6rem)] font-extrabold">
+        <h2 className="font-display heading-pop mb-3.5 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-white">
           {t("نمونه کارها", "Projects")}
         </h2>
         <p className="mb-10 max-w-[640px] text-textDim">
@@ -292,14 +295,14 @@ export default function Projects() {
               href={p.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex flex-col overflow-hidden rounded-lg2 border border-amber/40 bg-panel transition-all hover:-translate-y-1.5 hover:border-amber hover:shadow-[0_20px_40px_rgba(255,180,84,.18)]"
+              className="group glass-neon relative flex flex-col overflow-hidden rounded-lg2 transition-all hover:-translate-y-1.5 hover:shadow-glow"
             >
-              <span className="mono absolute right-4 top-4 z-10 rounded-full border border-amber/50 bg-ink/70 px-2.5 py-1 text-[0.7rem] font-bold text-amber backdrop-blur">
+              <span className="mono absolute right-4 top-4 z-10 rounded-full border border-neon/60 bg-black/70 px-2.5 py-1 text-[0.7rem] font-bold text-neon backdrop-blur">
                 {t("پروژه ویژه", "Featured")}
               </span>
-              <div className="flex items-center gap-2.5 border-b border-line bg-panel2 px-3.5 py-[11px]">
+              <div className="flex items-center gap-2.5 border-b border-line bg-white/[0.03] px-3.5 py-[11px]">
                 <Traffic />
-                <div className="mono ltr flex-1 overflow-hidden text-ellipsis whitespace-nowrap rounded-full bg-ink px-3 py-1.5 text-[0.76rem] text-textFaint">
+                <div className="mono ltr flex-1 overflow-hidden text-ellipsis whitespace-nowrap rounded-full bg-black px-3 py-1.5 text-[0.76rem] text-textFaint">
                   {p.domain}
                 </div>
               </div>
@@ -309,7 +312,7 @@ export default function Projects() {
               <div className="flex flex-1 flex-col p-5 pb-6">
                 <h3 className="mb-2 text-[1.12rem] font-bold">{t(p.titleFa, p.titleEn)}</h3>
                 <p className="mb-[18px] flex-1 text-[0.87rem] text-textDim">{t(p.descFa, p.descEn)}</p>
-                <span className="mono ltr inline-flex items-center gap-1.5 text-[0.83rem] font-semibold text-amber transition-all group-hover:gap-2.5">
+                <span className="mono ltr inline-flex items-center gap-1.5 text-[0.83rem] font-semibold text-neon transition-all group-hover:gap-2.5">
                   <span aria-hidden>→</span>
                   {t("مشاهده سایت", "View Website")}
                 </span>
@@ -326,15 +329,15 @@ export default function Projects() {
               href={`/samples/${p.slug}.html`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col overflow-hidden rounded-lg2 border border-line bg-panel transition-all hover:-translate-y-1.5 hover:border-amber hover:shadow-[0_20px_40px_rgba(255,180,84,.14)]"
+              className="group glass flex flex-col overflow-hidden rounded-lg2 transition-all hover:-translate-y-1.5 hover:border-neon hover:shadow-glowSm"
             >
-              <div className="flex items-center gap-2.5 border-b border-line bg-panel2 px-3.5 py-[11px]">
+              <div className="flex items-center gap-2.5 border-b border-line bg-white/[0.03] px-3.5 py-[11px]">
                 <Traffic />
-                <div className="mono ltr flex-1 overflow-hidden text-ellipsis whitespace-nowrap rounded-full bg-ink px-3 py-1.5 text-[0.76rem] text-textFaint">
+                <div className="mono ltr flex-1 overflow-hidden text-ellipsis whitespace-nowrap rounded-full bg-black px-3 py-1.5 text-[0.76rem] text-textFaint">
                   {p.slug}.html
                 </div>
               </div>
-              <div className="h-[150px] overflow-hidden bg-panel2">
+              <div className="h-[150px] overflow-hidden bg-white/[0.03]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={`/samples/shots/${p.slug}.webp`}
@@ -346,7 +349,7 @@ export default function Projects() {
               <div className="flex flex-1 flex-col p-5 pb-6">
                 <h3 className="mb-2 text-[1.08rem] font-bold">{t(p.titleFa, p.titleEn)}</h3>
                 <p className="mb-[18px] flex-1 text-[0.87rem] text-textDim">{t(p.descFa, p.descEn)}</p>
-                <span className="mono ltr inline-flex items-center gap-1.5 text-[0.83rem] font-semibold text-amber transition-all group-hover:gap-2.5">
+                <span className="mono ltr inline-flex items-center gap-1.5 text-[0.83rem] font-semibold text-neon transition-all group-hover:gap-2.5">
                   <span aria-hidden>→</span>
                   {t("مشاهده نمونه", "View Sample")}
                 </span>

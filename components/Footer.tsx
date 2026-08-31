@@ -7,8 +7,9 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-line py-9 text-center">
-      <p className="mono ltr text-[0.8rem] text-textFaint">
+    <footer className="relative overflow-hidden py-9 text-center">
+      <div className="section-divider absolute inset-x-0 top-0" />
+      <p className="mono ltr pt-4 text-[0.8rem] text-textFaint">
         © {year} moein-fayegh —{" "}
         {t("ساخته‌شده با React ذهنیت، کدنویسی‌شده با عشق", "Built with a React mindset, coded with love")}
       </p>

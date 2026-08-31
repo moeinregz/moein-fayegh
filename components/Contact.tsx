@@ -39,12 +39,14 @@ export default function Contact() {
   const t = useT();
 
   return (
-    <section id="contact" className="relative py-[110px]">
-      <div className="mx-auto max-w-[1180px] px-6">
-        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-amber">
+    <section id="contact" className="relative overflow-hidden py-[120px]">
+      <div className="section-divider absolute inset-x-0 top-0" />
+      <div className="glow-blob left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 bg-neon opacity-[.18] animate-pulseGlow" />
+      <div className="relative z-10 mx-auto max-w-[1180px] px-6">
+        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-neon">
           ~/moein-fayegh/contact.sh
         </span>
-        <h2 className="mb-3.5 text-[clamp(1.7rem,3.4vw,2.6rem)] font-extrabold">
+        <h2 className="font-display heading-pop mb-3.5 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-white">
           {t("بیا همکاری کنیم", "Let's Work Together")}
         </h2>
         <p className="mb-12 max-w-[640px] text-textDim">
@@ -59,10 +61,10 @@ export default function Contact() {
                 href={c.href}
                 target={c.href.startsWith("http") ? "_blank" : undefined}
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 rounded-md2 border border-line bg-panel p-[18px] transition-all hover:-translate-y-1 hover:border-mint"
+                className="glass flex items-center gap-3 rounded-md2 p-[18px] transition-all hover:-translate-y-1 hover:border-neon hover:shadow-glowSm"
               >
-                <div className="flex h-[38px] w-[38px] flex-none items-center justify-center rounded-[10px] bg-panel2">
-                  <svg viewBox="0 0 24 24" className="h-[18px] w-[18px] fill-mint">
+                <div className="flex h-[38px] w-[38px] flex-none items-center justify-center rounded-[10px] bg-white/[0.06]">
+                  <svg viewBox="0 0 24 24" className="h-[18px] w-[18px] fill-neon">
                     <path d={c.path} />
                   </svg>
                 </div>

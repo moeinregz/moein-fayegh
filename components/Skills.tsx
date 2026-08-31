@@ -48,12 +48,14 @@ export default function Skills() {
   const t = useT();
 
   return (
-    <section id="skills" className="relative py-[110px]">
-      <div className="mx-auto max-w-[1180px] px-6">
-        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-amber">
+    <section id="skills" className="relative overflow-hidden py-[120px]">
+      <div className="section-divider absolute inset-x-0 top-0" />
+      <div className="glow-blob -left-[120px] bottom-0 h-[420px] w-[420px] bg-neon opacity-[.18]" />
+      <div className="relative z-10 mx-auto max-w-[1180px] px-6">
+        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-neon">
           ~/moein-fayegh/skills.json
         </span>
-        <h2 className="mb-3.5 text-[clamp(1.7rem,3.4vw,2.6rem)] font-extrabold">
+        <h2 className="font-display heading-pop mb-3.5 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-white">
           {t("مهارت‌ها و تخصص‌ها", "Skills & Expertise")}
         </h2>
         <p className="mb-12 max-w-[640px] text-textDim">
@@ -84,7 +86,7 @@ export default function Skills() {
 
           <RevealOnScroll>
             <GroupLabel text="03 · seo & growth" />
-            <div className="rounded-md2 border border-line bg-panel px-6 py-2 sm:px-[26px]">
+            <div className="glass rounded-md2 px-6 py-2 sm:px-[26px]">
               {SEO.map((s, i) => (
                 <div
                   key={s.name}
@@ -92,7 +94,7 @@ export default function Skills() {
                     i < SEO.length - 1 ? "border-b border-lineSoft" : ""
                   }`}
                 >
-                  <span className="mono ltr text-mint">✓</span>
+                  <span className="mono ltr text-neon">✓</span>
                   <span className="font-bold text-text">{t(s.name, s.nameEn)}</span>
                   <span className="text-[0.87rem] text-textDim">— {t(s.fa, s.en)}</span>
                 </div>
@@ -117,9 +119,9 @@ export default function Skills() {
 
           <RevealOnScroll>
             <GroupLabel text="05 · language" />
-            <div className="rounded-md2 border border-line bg-panel px-6 py-4 sm:px-[26px]">
+            <div className="glass rounded-md2 px-6 py-4 sm:px-[26px]">
               <div className="flex flex-wrap items-baseline gap-3 text-[0.94rem]">
-                <span className="mono ltr text-mint">✓</span>
+                <span className="mono ltr text-neon">✓</span>
                 <span className="font-bold text-text">{t("زبان انگلیسی", "English")}</span>
                 <span className="text-[0.87rem] text-textDim">
                   —{" "}
@@ -148,9 +150,9 @@ function GroupLabel({ text }: { text: string }) {
 
 function SkillCard({ name, desc }: { name: string; desc: string }) {
   return (
-    <div className="rounded-md2 border border-line bg-panel p-5 pb-[22px] transition-all hover:-translate-y-1 hover:border-violet hover:shadow-[0_16px_30px_rgba(183,148,246,.14)]">
+    <div className="glass rounded-md2 p-5 pb-[22px] transition-all hover:-translate-y-1 hover:border-neon hover:shadow-glowSm">
       <h4 className="mb-2 flex items-center gap-2 text-[1.02rem] font-bold">
-        <span className="h-2 w-2 flex-none rounded-sm bg-violet" />
+        <span className="h-2 w-2 flex-none rounded-sm bg-neon" />
         {name}
       </h4>
       <p className="text-[0.87rem] text-textDim">{desc}</p>
