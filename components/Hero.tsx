@@ -7,21 +7,15 @@ import { XMark } from "@/components/XMark";
 import SwingBadge from "@/components/hero/SwingBadge";
 
 const SPECS_FA: [string, string][] = [
-  ["ROLE", "مهندس نرم‌افزار"],
   ["STACK", "React · Next.js · Node.js"],
-  ["CMS", "WordPress / WooCommerce"],
-  ["DATABASE", "MongoDB"],
+  ["DATABASE", "MongoDB · PostgreSQL · MySQL"],
   ["SEO", "On-page · Off-page · Technical · Local"],
-  ["STATUS", "در دسترس برای همکاری"],
 ];
 
 const SPECS_EN: [string, string][] = [
-  ["ROLE", "Software Engineer"],
   ["STACK", "React · Next.js · Node.js"],
-  ["CMS", "WordPress / WooCommerce"],
-  ["DATABASE", "MongoDB"],
+  ["DATABASE", "MongoDB · PostgreSQL · MySQL"],
   ["SEO", "On-page · Off-page · Technical · Local"],
-  ["STATUS", "Open to work"],
 ];
 
 export default function Hero() {
@@ -41,8 +35,8 @@ export default function Hero() {
         </span>
 
         <div className="grid grid-cols-1 items-start gap-x-[46px] gap-y-6 md:grid-cols-[0.95fr_1.05fr]">
-          {/* CARD — right side, sits high, up front */}
-          <RevealOnScroll className="relative order-1 md:-mt-4">
+          {/* CARD — Left side, sits high, up front */}
+          <RevealOnScroll className="relative order-2  md:mt-[-200px]">
             <span className="mono ltr absolute -top-8 start-1 hidden items-center gap-2 text-[0.78rem] text-textFaint before:content-['//'] before:text-bone/80 sm:inline-flex">
               {t("بکشش، بچرخونش", "drag it, spin it")}
             </span>
@@ -51,8 +45,8 @@ export default function Hero() {
             </div>
           </RevealOnScroll>
 
-          {/* INFO — left side */}
-          <div className="order-2 md:pt-3">
+          {/* INFO — right side */}
+          <div className="order-1 md:pt-3">
             <RevealOnScroll>
               <h1 className="font-display heading-pop mb-5 text-[clamp(2.6rem,6.4vw,4.6rem)] font-normal leading-[1.15] text-bone">
                 {t("معین فایق", "Moein Fayegh")}

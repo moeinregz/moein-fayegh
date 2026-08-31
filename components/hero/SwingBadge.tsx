@@ -112,7 +112,7 @@ export default function SwingBadge() {
 
   return (
     <div
-      className="relative flex h-full w-full items-start justify-center"
+      className=" relative flex h-full w-full items-start justify-center"
       style={{ perspective: 1400 }}
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
@@ -136,7 +136,7 @@ export default function SwingBadge() {
           style={{ transformOrigin: "top center" }}
         >
           {/* strap */}
-          <div className="relative h-[150px] w-[30px] overflow-hidden rounded-b-sm2 shadow-hard">
+          <div className="relative h-[50px] w-[30px] overflow-hidden rounded-b-sm2 shadow-hard">
             <div
               className="h-full w-full"
               style={{
@@ -156,7 +156,7 @@ export default function SwingBadge() {
             ref={cardRef}
             onPointerDown={onPointerDown}
             onPointerEnter={() => (hovering.current = true)}
-            className="glass-strong will-change-transform mt-1 w-[300px] cursor-grab select-none overflow-hidden rounded-lg2 shadow-liquid active:cursor-grabbing sm:w-[340px]"
+            className="glass-strong will-change-transform mt-1 w-[220px] h-auto cursor-grab select-none overflow-hidden rounded-lg2 shadow-liquid active:cursor-grabbing sm:w-[300px]"
             style={{ transformStyle: "preserve-3d" }}
           >
             {/* punch hole */}
