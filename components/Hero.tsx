@@ -36,7 +36,7 @@ export default function Hero() {
 
         <div className="grid grid-cols-1 items-start gap-x-[46px] gap-y-6 md:grid-cols-[0.95fr_1.05fr]">
           {/* CARD — Left side, sits high, up front */}
-          <RevealOnScroll className="relative order-2  md:mt-[-200px]">
+          <RevealOnScroll className="relative order-2  md:mt-[-100px]">
             <span className="mono ltr absolute -top-8 start-1 hidden items-center gap-2 text-[0.78rem] text-textFaint before:content-['//'] before:text-bone/80 sm:inline-flex">
               {t("بکشش، بچرخونش", "drag it, spin it")}
             </span>
