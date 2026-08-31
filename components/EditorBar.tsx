@@ -6,6 +6,7 @@ import { useLanguage, useT } from "@/components/Providers";
 const TABS = [
   { id: "hero", fa: "خانه", en: "Home", ext: "tsx", extColor: "text-violet" },
   { id: "about", fa: "درباره من", en: "About", ext: "tsx", extColor: "text-violet" },
+  { id: "experience", fa: "سابقه کاری", en: "Experience", ext: "log", extColor: "text-mint" },
   { id: "skills", fa: "مهارت‌ها", en: "Skills", ext: "json", extColor: "text-amber" },
   { id: "projects", fa: "نمونه کار", en: "Projects", ext: "tsx", extColor: "text-violet" },
   { id: "contact", fa: "تماس", en: "Contact", ext: "sh", extColor: "text-mint" },

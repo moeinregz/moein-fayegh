@@ -4,13 +4,30 @@ import { useT } from "@/components/Providers";
 import RevealOnScroll from "@/components/RevealOnScroll";
 
 const STACK = [
+  { name: "HTML5", fa: "ساختاردهی معنایی و استاندارد صفحات وب", en: "Semantic, standards-based markup for web pages" },
+  { name: "CSS3", fa: "استایل‌دهی دقیق، انیمیشن و طراحی واکنش‌گرا", en: "Precise styling, animation and responsive design" },
+  { name: "JavaScript", fa: "منطق سمت کلاینت و سرور با پایه‌ای‌ترین زبان وب", en: "Client and server-side logic with the core language of the web" },
+  { name: "TypeScript", fa: "کدنویسی امن و بدون خطا با تایپ استاتیک", en: "Safer, error-resistant coding with static typing" },
   { name: "React", fa: "ساخت رابط‌های کاربری پویا، سریع و کاملاً کامپوننت‌محور", en: "Building dynamic, fast, fully component-based interfaces" },
   { name: "Next.js", fa: "اپلیکیشن‌های فول‌استک با رندر سمت سرور برای سرعت و سئوی بهتر", en: "Full-stack apps with server-side rendering for speed and SEO" },
-  { name: "Node.js", fa: "سرویس‌ها و API های سمت سرور امن، سریع و مقیاس‌پذیر", en: "Secure, fast and scalable back-end services and APIs" },
-  { name: "TypeScript", fa: "کدنویسی امن و بدون خطا با تایپ استاتیک", en: "Safer, error-resistant coding with static typing" },
+  { name: "Redux", fa: "مدیریت متمرکز و قابل‌پیش‌بینی وضعیت اپلیکیشن", en: "Centralized, predictable application state management" },
   { name: "Tailwind CSS", fa: "طراحی رابط کاربری سریع و کاملاً واکنش‌گرا", en: "Fast, fully responsive UI design" },
   { name: "Axios", fa: "ارتباط پایدار و مدیریت‌شده بین فرانت‌اند و سرور", en: "Reliable, well-managed front-end/back-end communication" },
+  { name: "Node.js", fa: "سرویس‌ها و API های سمت سرور امن، سریع و مقیاس‌پذیر", en: "Secure, fast and scalable back-end services and APIs" },
+  { name: "Express.js", fa: "ساخت سریع API و سرویس‌های بک‌اند روی Node.js", en: "Rapidly building APIs and back-end services on Node.js" },
+  { name: "Go", fa: "توسعه سرویس‌های بک‌اند سریع و کارآمد", en: "Building fast, efficient back-end services" },
+  { name: "Python", fa: "اسکریپت‌نویسی، اتوماسیون و توسعه بک‌اند", en: "Scripting, automation and back-end development" },
   { name: "MongoDB", fa: "طراحی و مدیریت پایگاه داده‌های NoSQL مقیاس‌پذیر", en: "Designing and managing scalable NoSQL databases" },
+  { name: "PostgreSQL", fa: "طراحی و مدیریت پایگاه داده‌های رابطه‌ای قدرتمند", en: "Designing and managing powerful relational databases" },
+  { name: "MySQL", fa: "پیاده‌سازی و مدیریت پایگاه داده‌های رابطه‌ای رایج", en: "Implementing and managing widely-used relational databases" },
+  { name: "SQLite", fa: "پایگاه داده سبک برای پروژه‌های کوچک و توسعه سریع", en: "Lightweight database for small projects and rapid development" },
+];
+
+const DEVOPS = [
+  { name: "Git & GitHub", fa: "مدیریت نسخه، کار تیمی و بررسی کد", en: "Version control, team collaboration and code review" },
+  { name: "Docker", fa: "بسته‌بندی و اجرای یکسان اپلیکیشن روی هر محیط", en: "Packaging and running apps consistently across environments" },
+  { name: "Vercel", fa: "استقرار سریع و خودکار پروژه‌های Next.js", en: "Fast, automated deployment of Next.js projects" },
+  { name: "Netlify", fa: "استقرار و میزبانی سریع پروژه‌های فرانت‌اند", en: "Quick deployment and hosting for front-end projects" },
 ];
 
 const WP = [
@@ -80,6 +97,38 @@ export default function Skills() {
                   <span className="text-[0.87rem] text-textDim">— {t(s.fa, s.en)}</span>
                 </div>
               ))}
+            </div>
+          </RevealOnScroll>
+
+          <RevealOnScroll>
+            <GroupLabel text="04 · ui/ux & devops" />
+            <p className="mb-4 max-w-[640px] text-[0.9rem] text-textDim">
+              {t(
+                "طراحی UI/UX و انجام کامل کدنویسی Frontend و Backend همراه با اتصال دیتابیس، به‌علاوه ابزارهای استقرار و مدیریت نسخه.",
+                "UI/UX design and end-to-end Frontend and Backend development with database integration, plus deployment and version-control tooling."
+              )}
+            </p>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {DEVOPS.map((s) => (
+                <SkillCard key={s.name} name={s.name} desc={t(s.fa, s.en)} />
+              ))}
+            </div>
+          </RevealOnScroll>
+
+          <RevealOnScroll>
+            <GroupLabel text="05 · language" />
+            <div className="rounded-md2 border border-line bg-panel px-6 py-4 sm:px-[26px]">
+              <div className="flex flex-wrap items-baseline gap-3 text-[0.94rem]">
+                <span className="mono ltr text-mint">✓</span>
+                <span className="font-bold text-text">{t("زبان انگلیسی", "English")}</span>
+                <span className="text-[0.87rem] text-textDim">
+                  —{" "}
+                  {t(
+                    "مسلط در سطح C1، دارای مدرک TTC و TTC IELTS",
+                    "Fluent at C1 level, holder of TTC and TTC IELTS certificates"
+                  )}
+                </span>
+              </div>
             </div>
           </RevealOnScroll>
         </div>
