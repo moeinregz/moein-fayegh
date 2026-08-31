@@ -40,8 +40,6 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative overflow-hidden py-[120px]">
-      <div className="section-divider absolute inset-x-0 top-0" />
-      <div className="glow-blob left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 bg-white opacity-[.06] animate-driftGlow" />
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
         <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-white/80">
           ~/moein-fayegh/contact.sh

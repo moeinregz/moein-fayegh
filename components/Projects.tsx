@@ -273,7 +273,6 @@ export default function Projects() {
 
   return (
     <section id="projects" className="relative overflow-hidden py-[120px]">
-      <div className="section-divider absolute inset-x-0 top-0" />
       <div className="glow-blob -right-[100px] top-1/4 h-[400px] w-[400px] bg-white opacity-[.045]" />
       <div className="glow-blob -left-[140px] bottom-0 h-[380px] w-[380px] bg-white opacity-[.04]" />
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">

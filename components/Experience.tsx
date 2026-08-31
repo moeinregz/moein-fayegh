@@ -43,7 +43,6 @@ export default function Experience() {
 
   return (
     <section id="experience" className="relative overflow-hidden py-[120px]">
-      <div className="section-divider absolute inset-x-0 top-0" />
       <div className="glow-blob -right-[140px] top-10 h-[380px] w-[380px] bg-white opacity-[.05]" />
 
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">

@@ -30,7 +30,6 @@ export default function Hero() {
   return (
     <section id="hero" className="relative overflow-hidden pb-24 pt-[168px]">
       {/* glow blobs — unique to this section */}
-      <div className="glow-blob -right-[140px] -top-[180px] h-[560px] w-[560px] bg-white opacity-[.07] animate-driftGlow" />
       <div className="glow-blob -bottom-[180px] -left-[120px] h-[460px] w-[460px] bg-white opacity-[.045]" />
       <div className="glow-blob left-1/2 top-10 h-[220px] w-[220px] -translate-x-1/2 bg-white opacity-[.06]" />
 

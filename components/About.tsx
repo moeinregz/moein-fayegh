@@ -19,7 +19,6 @@ export default function About() {
 
   return (
     <section id="about" className="relative overflow-hidden py-[120px]">
-      <div className="section-divider absolute inset-x-0 top-0" />
       <div className="glow-blob -left-[160px] top-1/3 h-[420px] w-[420px] bg-white opacity-[.05]" />
 
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">

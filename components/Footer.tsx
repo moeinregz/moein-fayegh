@@ -8,7 +8,6 @@ export default function Footer() {
 
   return (
     <footer className="relative overflow-hidden py-9 text-center">
-      <div className="section-divider absolute inset-x-0 top-0" />
       <p className="mono ltr pt-4 text-[0.8rem] text-textFaint">
         © {year} moein-fayegh —{" "}
         {t("ساخته‌شده با React ذهنیت، کدنویسی‌شده با عشق", "Built with a React mindset, coded with love")}
