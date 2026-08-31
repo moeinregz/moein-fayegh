@@ -27,7 +27,7 @@ const JOBS = [
     role: "برنامه‌نویس فرانت‌اند",
     roleEn: "Front-End Developer",
     duration: "۲ سال",
-    durationEn: "2 years",
+    durationEn: "1 years",
   },
   {
     company: "اصل مارکت",
