@@ -20,7 +20,7 @@ const FEATURED_PROJECTS = [
     descEn: "An e-commerce platform with a custom UI and smooth shopping experience",
   },
   {
-    url: "https://web-pikaso.vercel.app/",
+    url: "https://webpikasoo.vercel.app/",
     domain: "web-pikaso.vercel.app/",
     initials: "WP",
     gradient: "bg-[#123a4d]",
