@@ -49,7 +49,7 @@ export default function Skills() {
   const t = useT();
 
   return (
-    <section id="skills" className="relative overflow-hidden py-[120px]">
+    <section id="skills" className="bg-arl-grey arl-seam-top relative overflow-hidden py-[120px]">
       <div className="section-divider absolute inset-x-0 top-0" />
       <div className="bg-blueprint absolute inset-0" />
       <div className="glow-blob -left-[120px] bottom-0 h-[420px] w-[420px] bg-blood opacity-[.08]" />

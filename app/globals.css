@@ -4,12 +4,12 @@
 
 html {
   scroll-behavior: smooth;
-  background: #0c0c0d;
+  background: #1c1c1e;
 }
 
 body {
-  /* flat matte charcoal — no gradient, no glow, just ink black + ash grey */
-  background: #0c0c0d;
+  /* balanced charcoal-grey base — not pure black — with matte ash grey + blood red */
+  background: #1c1c1e;
   color: #d9d6d2;
   font-weight: 600;
   line-height: 1.8;
@@ -21,23 +21,23 @@ body {
   color: #d9d6d2;
 }
 
-/* thin blood-red scrollbar, matte black track */
+/* thin blood-red scrollbar, matte track */
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #0c0c0d;
+  background: #1c1c1e;
 }
 ::-webkit-scrollbar-thumb {
   background: #5c0c1a;
   border-radius: 3px;
-  border: 2px solid #0c0c0d;
+  border: 2px solid #1c1c1e;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #a01128;
 }
 html {
-  scrollbar-color: #5c0c1a #0c0c0d;
+  scrollbar-color: #5c0c1a #1c1c1e;
 }
 
 /* code / latin content always reads LTR regardless of page language */
@@ -131,6 +131,45 @@ html {
   border-radius: 2px;
   background: #a01128;
   transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* ---------- Arlecchino-style section color-blocking ----------
+   Her coat reads as slabs of ash-grey, ink-black and blood-red stitched
+   together — grey and red both used as full section fills, not just
+   accents, with a red seam marking each changeover. All matte, no gradient. */
+.bg-arl-grey {
+  background: #46464c;
+}
+.bg-arl-black {
+  background: #141416;
+}
+.bg-arl-red {
+  background: #5c141f;
+}
+.arl-seam-top {
+  box-shadow: inset 0 3px 0 0 #7a0f22;
+}
+.arl-seam-bottom {
+  box-shadow: inset 0 -3px 0 0 #7a0f22;
+}
+
+/* subtle diamond / harlequin check — the costume's signature pattern,
+   kept faint and monochrome so it reads as texture, not decoration */
+.bg-harlequin {
+  background-image: repeating-linear-gradient(
+      45deg,
+      rgba(178, 176, 182, 0.05) 0,
+      rgba(178, 176, 182, 0.05) 1px,
+      transparent 1px,
+      transparent 46px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(178, 176, 182, 0.05) 0,
+      rgba(178, 176, 182, 0.05) 1px,
+      transparent 1px,
+      transparent 46px
+    );
 }
 
 /* ---------- distinctive section backgrounds (monochrome, subtle) ---------- */

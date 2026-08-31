@@ -40,7 +40,8 @@ export default function Contact() {
   const t = useT();
 
   return (
-    <section id="contact" className="relative overflow-hidden py-[120px]">
+    <section id="contact" className="bg-arl-red arl-seam-top relative overflow-hidden py-[120px]">
+      <div className="bg-harlequin absolute inset-0" />
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
         <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-bone/80">
           ~/moein-fayegh/contact.sh

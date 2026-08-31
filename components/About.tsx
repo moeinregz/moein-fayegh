@@ -19,7 +19,7 @@ export default function About() {
   const t = useT();
 
   return (
-    <section id="about" className="relative overflow-hidden py-[120px]">
+    <section id="about" className="bg-arl-grey arl-seam-top relative overflow-hidden py-[120px]">
       <div className="bg-scanlines absolute inset-0" />
       <div className="glow-blob -left-[160px] top-1/3 h-[420px] w-[420px] bg-blood opacity-[.08]" />
 

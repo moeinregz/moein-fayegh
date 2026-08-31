@@ -43,7 +43,7 @@ export default function Experience() {
   const t = useT();
 
   return (
-    <section id="experience" className="relative overflow-hidden py-[120px]">
+    <section id="experience" className="bg-arl-red arl-seam-top relative overflow-hidden py-[120px]">
       <div className="glow-blob -right-[140px] top-10 h-[380px] w-[380px] bg-blood opacity-[.08]" />
 
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
