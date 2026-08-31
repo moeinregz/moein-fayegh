@@ -13,7 +13,7 @@ const FEATURED_PROJECTS = [
     url: "https://asllmarket.ir/",
     domain: "asllmarket.ir",
     initials: "AM",
-    gradient: "from-[#1a2a12] to-[#2c4318]",
+    gradient: "bg-[#22331a]",
     titleFa: "اصل مارکت — فروشگاه اینترنتی",
     titleEn: "Asll Market — Online Store",
     descFa: "پلتفرم فروشگاهی با رابط کاربری اختصاصی و تجربه خرید روان",
@@ -23,7 +23,7 @@ const FEATURED_PROJECTS = [
     url: "https://web-pikaso.vercel.app/",
     domain: "web-pikaso.vercel.app/",
     initials: "WP",
-    gradient: "from-[#0F172A] to-[#0EA5E9]",
+    gradient: "bg-[#123a4d]",
     titleFa: "WebPikaso — شرکت برنامه نویسی",
     titleEn: "WebPikaso — Programming Company",
     descFa: "وبسایتی مینیمال با طرح امروزی با Node.js , React",
@@ -281,12 +281,12 @@ export default function Projects() {
     <section id="projects" className="relative overflow-hidden py-[120px]">
       <div className="bg-hatch absolute inset-0" />
       <div className="glow-blob -right-[100px] top-1/4 h-[400px] w-[400px] bg-blood opacity-[.07]" />
-      <div className="glow-blob -left-[140px] bottom-0 h-[380px] w-[380px] bg-white opacity-[.04]" />
+      <div className="glow-blob -left-[140px] bottom-0 h-[380px] w-[380px] bg-ash opacity-[.04]" />
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
-        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-white/80">
+        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-bone/80">
           ~/moein-fayegh/projects.tsx
         </span>
-        <h2 className="font-display heading-pop mb-3.5 flex items-center gap-3 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-white">
+        <h2 className="font-display heading-pop mb-3.5 flex items-center gap-3 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-bone">
           <XMark className="glow-blood h-6 w-6 flex-none text-bloodBright sm:h-8 sm:w-8" />
           {t("نمونه کارها", "Projects")}
         </h2>
@@ -304,22 +304,22 @@ export default function Projects() {
               rel="noopener noreferrer"
               className="group glass-strong relative flex flex-col overflow-hidden rounded-lg2 transition-all hover:-translate-y-1.5 hover:shadow-liquid"
             >
-              <span className="mono absolute right-4 top-4 z-10 rounded-full border border-blood/60 bg-black/70 px-2.5 py-1 text-[0.7rem] font-bold text-bloodBright backdrop-blur">
+              <span className="mono absolute right-4 top-4 z-10 rounded-full border border-blood/60 bg-black/70 px-2.5 py-1 text-[0.7rem] font-bold text-bloodBright">
                 {t("پروژه ویژه", "Featured")}
               </span>
-              <div className="flex items-center gap-2.5 border-b border-line bg-white/[0.03] px-3.5 py-[11px]">
+              <div className="flex items-center gap-2.5 border-b border-line bg-steel/[0.03] px-3.5 py-[11px]">
                 <Traffic />
                 <div className="mono ltr flex-1 overflow-hidden text-ellipsis whitespace-nowrap rounded-full bg-black px-3 py-1.5 text-[0.76rem] text-textFaint">
                   {p.domain}
                 </div>
               </div>
-              <div className={`flex h-[170px] items-center justify-center bg-gradient-to-br ${p.gradient}`}>
-                <span className="mono ltr text-[1.5rem] font-bold text-white/55">{p.initials}</span>
+              <div className={`flex h-[170px] items-center justify-center ${p.gradient}`}>
+                <span className="mono ltr text-[1.5rem] font-bold text-bone/55">{p.initials}</span>
               </div>
               <div className="flex flex-1 flex-col p-5 pb-6">
                 <h3 className="mb-2 text-[1.12rem] font-bold">{t(p.titleFa, p.titleEn)}</h3>
                 <p className="mb-[18px] flex-1 text-[0.87rem] text-textDim">{t(p.descFa, p.descEn)}</p>
-                <span className="mono ltr inline-flex items-center gap-1.5 text-[0.83rem] font-semibold text-white transition-all group-hover:gap-2.5 group-hover:text-bloodBright">
+                <span className="mono ltr inline-flex items-center gap-1.5 text-[0.83rem] font-semibold text-bone transition-all group-hover:gap-2.5 group-hover:text-bloodBright">
                   <span aria-hidden>→</span>
                   {t("مشاهده سایت", "View Website")}
                 </span>
@@ -338,13 +338,13 @@ export default function Projects() {
               rel="noopener noreferrer"
               className="group glass flex flex-col overflow-hidden rounded-lg2 transition-all hover:-translate-y-1.5 hover:border-blood/50 hover:shadow-liquidSm"
             >
-              <div className="flex items-center gap-2.5 border-b border-line bg-white/[0.03] px-3.5 py-[11px]">
+              <div className="flex items-center gap-2.5 border-b border-line bg-steel/[0.03] px-3.5 py-[11px]">
                 <Traffic />
                 <div className="mono ltr flex-1 overflow-hidden text-ellipsis whitespace-nowrap rounded-full bg-black px-3 py-1.5 text-[0.76rem] text-textFaint">
                   {p.slug}.html
                 </div>
               </div>
-              <div className="h-[150px] overflow-hidden bg-white/[0.03]">
+              <div className="h-[150px] overflow-hidden bg-steel/[0.03]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={`/samples/shots/${p.slug}.webp`}
@@ -356,7 +356,7 @@ export default function Projects() {
               <div className="flex flex-1 flex-col p-5 pb-6">
                 <h3 className="mb-2 text-[1.08rem] font-bold">{t(p.titleFa, p.titleEn)}</h3>
                 <p className="mb-[18px] flex-1 text-[0.87rem] text-textDim">{t(p.descFa, p.descEn)}</p>
-                <span className="mono ltr inline-flex items-center gap-1.5 text-[0.83rem] font-semibold text-white transition-all group-hover:gap-2.5 group-hover:text-bloodBright">
+                <span className="mono ltr inline-flex items-center gap-1.5 text-[0.83rem] font-semibold text-bone transition-all group-hover:gap-2.5 group-hover:text-bloodBright">
                   <span aria-hidden>→</span>
                   {t("مشاهده نمونه", "View Sample")}
                 </span>

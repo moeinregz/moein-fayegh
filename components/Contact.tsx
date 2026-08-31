@@ -42,10 +42,10 @@ export default function Contact() {
   return (
     <section id="contact" className="relative overflow-hidden py-[120px]">
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
-        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-white/80">
+        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-bone/80">
           ~/moein-fayegh/contact.sh
         </span>
-        <h2 className="font-display heading-pop mb-3.5 flex items-center gap-3 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-white">
+        <h2 className="font-display heading-pop mb-3.5 flex items-center gap-3 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-bone">
           <XMark className="glow-blood h-6 w-6 flex-none text-bloodBright sm:h-8 sm:w-8" />
           {t("بیا همکاری کنیم", "Let's Work Together")}
         </h2>

@@ -20,7 +20,7 @@ export default function TopButton() {
         show ? "opacity-100" : "pointer-events-none opacity-0"
       }`}
     >
-      <svg viewBox="0 0 24 24" className="h-[18px] w-[18px] stroke-white fill-none stroke-2">
+      <svg viewBox="0 0 24 24" className="h-[18px] w-[18px] stroke-bone fill-none stroke-2">
         <path d="M12 19V5M5 12l7-7 7 7" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     </button>

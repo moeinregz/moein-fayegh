@@ -32,20 +32,20 @@ export default function Hero() {
     <section id="hero" className="relative overflow-hidden pb-24 pt-[168px]">
       {/* glow blobs — unique to this section */}
       <div className="glow-blob -bottom-[180px] -left-[120px] h-[460px] w-[460px] bg-blood opacity-[.08]" />
-      <div className="glow-blob left-1/2 top-10 h-[220px] w-[220px] -translate-x-1/2 bg-white opacity-[.06]" />
+      <div className="glow-blob left-1/2 top-10 h-[220px] w-[220px] -translate-x-1/2 bg-ash opacity-[.06]" />
 
       {/* large faint X-mark watermark, echoing the crossed eye-scar motif */}
       <XMark className="x-watermark -right-16 top-8 h-[420px] w-[420px] rotate-[8deg] sm:-right-10" />
 
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
-        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-white/80">
+        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-bone/80">
           ~/moein-fayegh/index.tsx
         </span>
 
         <RevealOnScroll>
-          <h1 className="font-display heading-pop mb-8 text-[clamp(2.6rem,7vw,5.2rem)] font-normal leading-[1.15] text-white">
+          <h1 className="font-display heading-pop mb-8 text-[clamp(2.6rem,7vw,5.2rem)] font-normal leading-[1.15] text-bone">
             {t("معین فایق", "Moein Fayegh")}
-            <span className="mt-3 block text-[clamp(1.2rem,2.6vw,1.9rem)] text-white">
+            <span className="mt-3 block text-[clamp(1.2rem,2.6vw,1.9rem)] text-bone">
               {t("توسعه‌دهنده فول‌استک", "Full-Stack Developer")}
             </span>
           </h1>
@@ -53,8 +53,8 @@ export default function Hero() {
 
         <RevealOnScroll className="grid grid-cols-1 gap-[34px] md:grid-cols-2">
           {/* CODE EDITOR PANE */}
-          <div className="glass overflow-hidden rounded-lg2 shadow-[0_30px_70px_rgba(0,0,0,.6)]">
-            <div className="flex items-center gap-2.5 border-b border-line bg-white/[0.03] px-4 py-3">
+          <div className="glass overflow-hidden rounded-lg2">
+            <div className="flex items-center gap-2.5 border-b border-line bg-steel/[0.03] px-4 py-3">
               <Traffic />
               <span className="mono ms-1 text-[0.78rem] text-textDim">index.tsx</span>
             </div>
@@ -65,26 +65,26 @@ export default function Hero() {
                 ))}
               </div>
               <div className="mono ltr flex-1 whitespace-pre-wrap text-[0.94rem] leading-[2]">
-                <span className="text-white">const</span> developer{" "}
+                <span className="text-bone">const</span> developer{" "}
                 <span className="text-textFaint">=</span> {"{"}
                 <br />
                 &nbsp;&nbsp;name<span className="text-textFaint">:</span>{" "}
-                <span className="text-white">
+                <span className="text-bone">
                   &quot;{t("معین فایق", "Moein Fayegh")}&quot;
                 </span>
                 ,<br />
                 &nbsp;&nbsp;role<span className="text-textFaint">:</span>{" "}
-                <span className="text-white">
+                <span className="text-bone">
                   &quot;{t("توسعه‌دهنده فول‌استک", "Full-Stack Developer")}&quot;
                 </span>
                 ,<br />
                 &nbsp;&nbsp;stack<span className="text-textFaint">:</span> [
-                <span className="text-white">&quot;React&quot;</span>,{" "}
-                <span className="text-white">&quot;Next.js&quot;</span>,{" "}
-                <span className="text-white">&quot;Node.js&quot;</span>],
+                <span className="text-bone">&quot;React&quot;</span>,{" "}
+                <span className="text-bone">&quot;Next.js&quot;</span>,{" "}
+                <span className="text-bone">&quot;Node.js&quot;</span>],
                 <br />
                 &nbsp;&nbsp;status<span className="text-textFaint">:</span>{" "}
-                <span className="text-white">
+                <span className="text-bone">
                   &quot;{t("در دسترس برای همکاری", "Open to work")}&quot;
                 </span>
                 ,<br />
@@ -94,20 +94,20 @@ export default function Hero() {
                 </span>
                 <br />
                 {"}"};
-                <span className="ms-0.5 inline-block h-[1.1em] w-2 animate-blink bg-bloodBright align-text-bottom shadow-[0_0_10px_2px_rgba(255,36,64,.6)]" />
+                <span className="ms-0.5 inline-block h-[1.1em] w-2 animate-blink bg-bloodBright align-text-bottom" />
               </div>
             </div>
           </div>
 
           {/* TERMINAL PANE */}
-          <div className="glass-strong overflow-hidden rounded-lg2 shadow-[0_30px_70px_rgba(0,0,0,.6)]">
-            <div className="flex items-center gap-2.5 border-b border-white/20 bg-white/[0.03] px-4 py-3">
+          <div className="glass-strong overflow-hidden rounded-lg2">
+            <div className="flex items-center gap-2.5 border-b border-steel/20 bg-steel/[0.03] px-4 py-3">
               <Traffic />
               <span className="mono ms-1 text-[0.78rem] text-textDim">zsh — build</span>
             </div>
             <div className="mono ltr px-6 py-[26px] text-[0.86rem] leading-[1.95] text-textDim">
               <div className="animate-termIn opacity-0" style={{ animationDelay: ".1s" }}>
-                <span className="text-white">➜</span>{" "}
+                <span className="text-bone">➜</span>{" "}
                 <b className="font-semibold text-text">npm run introduce</b>
               </div>
               <div className="animate-termIn opacity-0" style={{ animationDelay: ".5s" }}>
@@ -138,7 +138,7 @@ export default function Hero() {
         <RevealOnScroll className="mt-[26px] flex flex-wrap gap-3.5">
           <a
             href="#projects"
-            className="mono inline-flex items-center gap-2 rounded-sm2 bg-gradient-to-r from-blood to-bloodBright px-6 py-3.5 text-[0.9rem] font-extrabold text-white transition-transform hover:-translate-y-0.5 hover:shadow-glowBlood"
+            className="mono inline-flex items-center gap-2 rounded-sm2 bg-blood px-6 py-3.5 text-[0.9rem] font-extrabold text-bone transition-transform hover:-translate-y-0.5 hover:shadow-glowBlood"
           >
             {t("مشاهده نمونه‌کارها", "View Projects")}
           </a>

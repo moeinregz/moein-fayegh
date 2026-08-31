@@ -24,10 +24,10 @@ export default function About() {
       <div className="glow-blob -left-[160px] top-1/3 h-[420px] w-[420px] bg-blood opacity-[.08]" />
 
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
-        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-white/80">
+        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-bone/80">
           ~/moein-fayegh/about.tsx
         </span>
-        <h2 className="font-display heading-pop mb-3.5 flex items-center gap-3 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-white">
+        <h2 className="font-display heading-pop mb-3.5 flex items-center gap-3 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-bone">
           <XMark className="glow-blood h-6 w-6 flex-none text-bloodBright sm:h-8 sm:w-8" />
           {t("درباره من", "About Me")}
         </h2>
@@ -54,8 +54,8 @@ export default function About() {
             </div>
           </RevealOnScroll>
 
-          <RevealOnScroll className="glass overflow-hidden rounded-lg2 shadow-[0_30px_60px_rgba(0,0,0,.5)]">
-            <div className="flex items-center gap-2.5 border-b border-line bg-white/[0.03] px-4 py-3">
+          <RevealOnScroll className="glass overflow-hidden rounded-lg2">
+            <div className="flex items-center gap-2.5 border-b border-line bg-steel/[0.03] px-4 py-3">
               <Traffic />
               <span className="mono ms-1 text-[0.78rem] text-textDim">package.json</span>
             </div>
@@ -93,7 +93,7 @@ export default function About() {
 function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div>
-      <b className="font-display block text-[1.9rem] font-normal text-white">{value}</b>
+      <b className="font-display block text-[1.9rem] font-normal text-bone">{value}</b>
       <span className="text-[0.82rem] text-textFaint">{label}</span>
     </div>
   );

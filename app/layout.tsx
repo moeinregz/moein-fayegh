@@ -50,7 +50,7 @@ export default function RootLayout({
       dir="rtl"
       className={`${vazirmatn.variable} ${lalezar.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="dot-grid bg-black font-sans text-white antialiased">
+      <body className="dot-grid bg-black font-sans text-bone antialiased">
         <Providers>{children}</Providers>
       </body>
     </html>
