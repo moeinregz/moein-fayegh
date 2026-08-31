@@ -31,7 +31,8 @@ export default function Hero() {
     <section id="hero" className="relative overflow-hidden pb-24 pt-[168px]">
       {/* glow blobs — unique to this section */}
       <div className="glow-blob -bottom-[180px] -left-[120px] h-[460px] w-[460px] bg-white opacity-[.045]" />
-      <div className="glow-blob left-1/2 top-10 h-[220px] w-[220px] -translate-x-1/2 bg-white opacity-[.06]" />
+      <div className="glow-blob left-1/2 top-10 h-[220px] w-[220px] -translate-x-1/2 bg-bloodBright opacity-[.12]" />
+      <div className="x-mark pointer-events-none absolute -right-16 top-8 h-[260px] w-[260px] opacity-40 sm:-right-6 sm:top-4" />
 
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
         <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-white/80">
@@ -90,7 +91,7 @@ export default function Hero() {
                 </span>
                 <br />
                 {"}"};
-                <span className="ms-0.5 inline-block h-[1.1em] w-2 animate-blink bg-white align-text-bottom" />
+                <span className="ms-0.5 inline-block h-[1.1em] w-2 animate-blink bg-bloodBright align-text-bottom" />
               </div>
             </div>
           </div>
@@ -115,7 +116,7 @@ export default function Hero() {
                   className="animate-termIn opacity-0"
                   style={{ animationDelay: `${0.7 + i * 0.2}s` }}
                 >
-                  <span className="text-white">✓</span> {line.label}{" "}
+                  <span className="text-bloodBright">✓</span> {line.label}{" "}
                   {line.note && <span className="text-textFaint">— {line.note}</span>}
                 </div>
               ))}
@@ -134,13 +135,13 @@ export default function Hero() {
         <RevealOnScroll className="mt-[26px] flex flex-wrap gap-3.5">
           <a
             href="#projects"
-            className="mono inline-flex items-center gap-2 rounded-sm2 bg-white px-6 py-3.5 text-[0.9rem] font-extrabold text-black transition-transform hover:-translate-y-0.5 hover:shadow-liquid"
+            className="mono inline-flex items-center gap-2 rounded-sm2 bg-white px-6 py-3.5 text-[0.9rem] font-extrabold text-black transition-transform hover:-translate-y-0.5 hover:shadow-liquidBlood"
           >
             {t("مشاهده نمونه‌کارها", "View Projects")}
           </a>
           <a
             href="#contact"
-            className="mono glass inline-flex items-center gap-2 rounded-sm2 px-6 py-3.5 text-[0.9rem] font-extrabold text-text transition-colors hover:border-white/50 hover:text-white"
+            className="mono glass inline-flex items-center gap-2 rounded-sm2 px-6 py-3.5 text-[0.9rem] font-extrabold text-text transition-colors hover:border-blood/70 hover:text-white"
           >
             {t("شروع همکاری", "Start a Project")}
           </a>

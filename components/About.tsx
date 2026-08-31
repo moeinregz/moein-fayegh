@@ -21,6 +21,7 @@ export default function About() {
     <section id="about" className="relative overflow-hidden py-[120px]">
       <div className="bg-scanlines absolute inset-0" />
       <div className="glow-blob -left-[160px] top-1/3 h-[420px] w-[420px] bg-white opacity-[.05]" />
+      <div className="x-mark absolute -left-10 bottom-0 h-[200px] w-[200px] opacity-[.22] sm:left-2" />
 
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
         <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-white/80">

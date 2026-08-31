@@ -14,10 +14,15 @@ const config: Config = {
         panel3: "#161616",
         line: "rgba(255,255,255,.16)",
         lineSoft: "rgba(255,255,255,.08)",
-        rose: "#ff5577",
+        rose: "#ff3355",
         text: "#ffffff",
         textDim: "#b7b7c2",
         textFaint: "#6a6a75",
+        // signature accent — pulled from the reference character art:
+        // blood-red against black/silver, used sparingly for emphasis
+        blood: "#b3122a",
+        bloodBright: "#ff3355",
+        bloodDim: "rgba(179,18,42,.35)",
         // legacy aliases kept so nothing silently breaks — everything reads as white now
         amber: "#ffffff",
         mint: "#ffffff",
@@ -41,6 +46,9 @@ const config: Config = {
         liquidSm:
           "0 10px 26px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.3)",
         glowWhite: "0 0 50px rgba(255,255,255,.14)",
+        glowBlood: "0 0 40px rgba(179,18,42,.4)",
+        liquidBlood:
+          "0 24px 60px rgba(0,0,0,.65), inset 0 1px 0 rgba(255,255,255,.25), 0 0 0 1px rgba(179,18,42,.35), 0 0 34px rgba(179,18,42,.25)",
       },
       keyframes: {
         blink: { "50%": { opacity: "0" } },

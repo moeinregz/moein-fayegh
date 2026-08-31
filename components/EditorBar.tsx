@@ -70,7 +70,7 @@ export default function EditorBar() {
             >
               <span
                 className={`h-1.5 w-1.5 flex-none rounded-full ${
-                  active === tab.id ? "bg-white shadow-[0_0_10px_2px_rgba(255,255,255,.7)]" : "bg-textFaint"
+                  active === tab.id ? "bg-bloodBright shadow-[0_0_10px_2px_rgba(255,51,85,.75)]" : "bg-textFaint"
                 }`}
               />
               <span>{t(tab.fa, tab.en)}</span>
@@ -83,7 +83,7 @@ export default function EditorBar() {
           onClick={toggleLang}
           type="button"
           aria-label="تغییر زبان"
-          className="mono flex flex-none items-center gap-1.5 rounded-full border border-line bg-white/5 px-3.5 py-1.5 text-[0.78rem] font-bold text-text transition-colors hover:border-white/50 hover:text-white"
+          className="mono flex flex-none items-center gap-1.5 rounded-full border border-line bg-white/5 px-3.5 py-1.5 text-[0.78rem] font-bold text-text transition-colors hover:border-blood/70 hover:text-white"
         >
           <span aria-hidden>🌐</span>
           <span>{lang === "fa" ? "EN" : "فا"}</span>
@@ -96,7 +96,7 @@ export default function EditorBar() {
 export function Traffic() {
   return (
     <div className="ltr flex flex-none gap-[7px]">
-      <span className="block h-[11px] w-[11px] rounded-full border border-white/20 bg-white" />
+      <span className="block h-[11px] w-[11px] rounded-full border border-blood/60 bg-bloodBright shadow-[0_0_8px_1px_rgba(255,51,85,.55)]" />
       <span className="block h-[11px] w-[11px] rounded-full border border-white/20 bg-white/60" />
       <span className="block h-[11px] w-[11px] rounded-full border border-white/50 bg-white" />
     </div>

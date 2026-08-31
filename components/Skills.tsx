@@ -95,7 +95,7 @@ export default function Skills() {
                     i < SEO.length - 1 ? "border-b border-lineSoft" : ""
                   }`}
                 >
-                  <span className="mono ltr text-white">✓</span>
+                  <span className="mono ltr text-bloodBright">✓</span>
                   <span className="font-bold text-text">{t(s.name, s.nameEn)}</span>
                   <span className="text-[0.87rem] text-textDim">— {t(s.fa, s.en)}</span>
                 </div>
@@ -122,7 +122,7 @@ export default function Skills() {
             <GroupLabel text="05 · language" />
             <div className="glass rounded-md2 px-6 py-4 sm:px-[26px]">
               <div className="flex flex-wrap items-baseline gap-3 text-[0.94rem]">
-                <span className="mono ltr text-white">✓</span>
+                <span className="mono ltr text-bloodBright">✓</span>
                 <span className="font-bold text-text">{t("زبان انگلیسی", "English")}</span>
                 <span className="text-[0.87rem] text-textDim">
                   —{" "}
@@ -143,6 +143,7 @@ export default function Skills() {
 function GroupLabel({ text }: { text: string }) {
   return (
     <div className="mono ltr mb-4 flex items-center gap-2.5 text-[0.82rem] text-textFaint">
+      <span className="h-1 w-1 flex-none rounded-full bg-bloodBright shadow-[0_0_6px_1px_rgba(255,51,85,.6)]" />
       {text}
       <span className="h-px flex-1 bg-line" />
     </div>
@@ -151,9 +152,9 @@ function GroupLabel({ text }: { text: string }) {
 
 function SkillCard({ name, desc }: { name: string; desc: string }) {
   return (
-    <div className="glass rounded-md2 p-4 pb-[18px] transition-all hover:-translate-y-1 hover:border-white/50 hover:shadow-liquidSm sm:p-5 sm:pb-[22px]">
+    <div className="glass rounded-md2 p-4 pb-[18px] transition-all hover:-translate-y-1 hover:border-blood/70 hover:shadow-glowBlood sm:p-5 sm:pb-[22px]">
       <h4 className="mb-2 flex items-center gap-2 text-[0.92rem] font-bold sm:text-[1.02rem]">
-        <span className="h-2 w-2 flex-none rounded-sm bg-white" />
+        <span className="h-2 w-2 flex-none rounded-sm bg-bloodBright shadow-[0_0_6px_1px_rgba(255,51,85,.6)]" />
         {name}
       </h4>
       <p className="text-[0.8rem] text-textDim sm:text-[0.87rem]">{desc}</p>

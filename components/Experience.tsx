@@ -62,8 +62,8 @@ export default function Experience() {
         <div className="relative flex flex-col gap-5 border-r-2 border-white/25 pr-8 sm:pr-10">
           {JOBS.map((job, i) => (
             <RevealOnScroll key={job.companyEn}>
-              <div className="glass relative rounded-md2 p-5 pb-[22px] transition-all hover:-translate-y-1 hover:border-white/50 hover:shadow-liquidSm">
-                <span className="absolute top-6 -right-[calc(2rem+6px)] h-3 w-3 rounded-full bg-white shadow-[0_0_14px_4px_rgba(255,255,255,.55)] sm:-right-[calc(2.5rem+6px)]" />
+              <div className="glass relative rounded-md2 p-5 pb-[22px] transition-all hover:-translate-y-1 hover:border-blood/70 hover:shadow-glowBlood">
+                <span className="absolute top-6 -right-[calc(2rem+6px)] h-3 w-3 rounded-full bg-bloodBright shadow-[0_0_14px_4px_rgba(255,51,85,.55)] sm:-right-[calc(2.5rem+6px)]" />
                 <div className="mb-1.5 flex flex-wrap items-center justify-between gap-2">
                   <h4 className="text-[1.05rem] font-extrabold text-text">
                     {t(job.company, job.companyEn)}

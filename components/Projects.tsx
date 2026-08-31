@@ -300,9 +300,9 @@ export default function Projects() {
               href={p.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group glass-strong relative flex flex-col overflow-hidden rounded-lg2 transition-all hover:-translate-y-1.5 hover:shadow-liquid"
+              className="group glass-strong relative flex flex-col overflow-hidden rounded-lg2 transition-all hover:-translate-y-1.5 hover:shadow-liquidBlood"
             >
-              <span className="mono absolute right-4 top-4 z-10 rounded-full border border-white/50 bg-black/70 px-2.5 py-1 text-[0.7rem] font-bold text-white backdrop-blur">
+              <span className="mono absolute right-4 top-4 z-10 rounded-full border border-blood/70 bg-black/70 px-2.5 py-1 text-[0.7rem] font-bold text-white backdrop-blur">
                 {t("پروژه ویژه", "Featured")}
               </span>
               <div className="flex items-center gap-2.5 border-b border-line bg-white/[0.03] px-3.5 py-[11px]">
@@ -317,7 +317,7 @@ export default function Projects() {
               <div className="flex flex-1 flex-col p-5 pb-6">
                 <h3 className="mb-2 text-[1.12rem] font-bold">{t(p.titleFa, p.titleEn)}</h3>
                 <p className="mb-[18px] flex-1 text-[0.87rem] text-textDim">{t(p.descFa, p.descEn)}</p>
-                <span className="mono ltr inline-flex items-center gap-1.5 text-[0.83rem] font-semibold text-white transition-all group-hover:gap-2.5">
+                <span className="mono ltr inline-flex items-center gap-1.5 text-[0.83rem] font-semibold text-white transition-all group-hover:gap-2.5 group-hover:text-bloodBright">
                   <span aria-hidden>→</span>
                   {t("مشاهده سایت", "View Website")}
                 </span>
@@ -334,7 +334,7 @@ export default function Projects() {
               href={`/samples/${p.slug}.html`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group glass flex flex-col overflow-hidden rounded-lg2 transition-all hover:-translate-y-1.5 hover:border-white/50 hover:shadow-liquidSm"
+              className="group glass flex flex-col overflow-hidden rounded-lg2 transition-all hover:-translate-y-1.5 hover:border-blood/70 hover:shadow-glowBlood"
             >
               <div className="flex items-center gap-2.5 border-b border-line bg-white/[0.03] px-3.5 py-[11px]">
                 <Traffic />
@@ -354,7 +354,7 @@ export default function Projects() {
               <div className="flex flex-1 flex-col p-5 pb-6">
                 <h3 className="mb-2 text-[1.08rem] font-bold">{t(p.titleFa, p.titleEn)}</h3>
                 <p className="mb-[18px] flex-1 text-[0.87rem] text-textDim">{t(p.descFa, p.descEn)}</p>
-                <span className="mono ltr inline-flex items-center gap-1.5 text-[0.83rem] font-semibold text-white transition-all group-hover:gap-2.5">
+                <span className="mono ltr inline-flex items-center gap-1.5 text-[0.83rem] font-semibold text-white transition-all group-hover:gap-2.5 group-hover:text-bloodBright">
                   <span aria-hidden>→</span>
                   {t("مشاهده نمونه", "View Sample")}
                 </span>
@@ -368,7 +368,7 @@ export default function Projects() {
             <button
               type="button"
               onClick={() => setShowAll(true)}
-              className="mono glass inline-flex items-center gap-2 rounded-sm2 px-7 py-3.5 text-[0.9rem] font-extrabold text-text transition-colors hover:border-white/50 hover:text-white"
+              className="mono glass inline-flex items-center gap-2 rounded-sm2 px-7 py-3.5 text-[0.9rem] font-extrabold text-text transition-colors hover:border-blood/70 hover:text-white"
             >
               {t(
                 `مشاهده همه (${SAMPLE_PROJECTS.length})`,
