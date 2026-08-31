@@ -6,28 +6,28 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 import { XMark } from "@/components/XMark";
 import SwingBadge from "@/components/hero/SwingBadge";
 
-const TERM_LINES_FA = [
-  { ok: true, label: "React", note: "رابط کاربری" },
-  { ok: true, label: "Next.js", note: "SSR / SEO" },
-  { ok: true, label: "Node.js", note: "سرور و API" },
-  { ok: true, label: "MongoDB", note: "دیتابیس" },
-  { ok: true, label: "WordPress / WooCommerce", note: "" },
-  { ok: true, label: "SEO", note: "On-page / Off-page / Technical / Local" },
+const SPECS_FA: [string, string][] = [
+  ["ROLE", "مهندس نرم‌افزار"],
+  ["STACK", "React · Next.js · Node.js"],
+  ["CMS", "WordPress / WooCommerce"],
+  ["DATABASE", "MongoDB"],
+  ["SEO", "On-page · Off-page · Technical · Local"],
+  ["STATUS", "در دسترس برای همکاری"],
 ];
 
-const TERM_LINES_EN = [
-  { ok: true, label: "React", note: "UI" },
-  { ok: true, label: "Next.js", note: "SSR / SEO" },
-  { ok: true, label: "Node.js", note: "server & APIs" },
-  { ok: true, label: "MongoDB", note: "database" },
-  { ok: true, label: "WordPress / WooCommerce", note: "" },
-  { ok: true, label: "SEO", note: "On-page / Off-page / Technical / Local" },
+const SPECS_EN: [string, string][] = [
+  ["ROLE", "Software Engineer"],
+  ["STACK", "React · Next.js · Node.js"],
+  ["CMS", "WordPress / WooCommerce"],
+  ["DATABASE", "MongoDB"],
+  ["SEO", "On-page · Off-page · Technical · Local"],
+  ["STATUS", "Open to work"],
 ];
 
 export default function Hero() {
   const { lang } = useLanguage();
   const t = useT();
-  const lines = lang === "fa" ? TERM_LINES_FA : TERM_LINES_EN;
+  const specs = lang === "fa" ? SPECS_FA : SPECS_EN;
 
   return (
     <section id="hero" className="bg-arl-black bg-xmarks relative overflow-hidden pb-24 pt-[168px]">
@@ -40,9 +40,19 @@ export default function Hero() {
           ~/moein-fayegh/index.tsx
         </span>
 
-        <div className="grid grid-cols-1 items-center gap-[46px] md:grid-cols-[1.05fr_0.95fr]">
-          {/* INFO — right side of the section */}
-          <div>
+        <div className="grid grid-cols-1 items-start gap-x-[46px] gap-y-6 md:grid-cols-[0.95fr_1.05fr]">
+          {/* CARD — right side, sits high, up front */}
+          <RevealOnScroll className="relative order-1 md:-mt-4">
+            <span className="mono ltr absolute -top-8 start-1 hidden items-center gap-2 text-[0.78rem] text-textFaint before:content-['//'] before:text-bone/80 sm:inline-flex">
+              {t("بکشش، بچرخونش", "drag it, spin it")}
+            </span>
+            <div className="h-[480px] w-full sm:h-[560px] md:h-[620px]">
+              <SwingBadge />
+            </div>
+          </RevealOnScroll>
+
+          {/* INFO — left side */}
+          <div className="order-2 md:pt-3">
             <RevealOnScroll>
               <h1 className="font-display heading-pop mb-5 text-[clamp(2.6rem,6.4vw,4.6rem)] font-normal leading-[1.15] text-bone">
                 {t("معین فایق", "Moein Fayegh")}
@@ -59,37 +69,26 @@ export default function Hero() {
               </p>
             </RevealOnScroll>
 
-            {/* compact terminal panel — the engineering signal */}
+            {/* spec sheet — replaces the terminal panel */}
             <RevealOnScroll className="glass-strong overflow-hidden rounded-lg2">
               <div className="flex items-center gap-2.5 border-b border-steel/20 bg-steel/[0.03] px-4 py-3">
                 <Traffic />
-                <span className="mono ms-1 text-[0.78rem] text-textDim">zsh — build</span>
+                <span className="mono ms-1 text-[0.78rem] text-textDim">spec.json</span>
               </div>
-              <div className="mono ltr px-6 py-[26px] text-[0.86rem] leading-[1.95] text-textDim">
-                <div className="animate-termIn opacity-0" style={{ animationDelay: ".1s" }}>
-                  <span className="text-bone">➜</span> <b className="font-semibold text-text">npm run introduce</b>
-                </div>
-                <div className="animate-termIn opacity-0" style={{ animationDelay: ".5s" }}>
-                  &nbsp;
-                </div>
-                {lines.map((line, i) => (
+              <div className="grid grid-cols-1 sm:grid-cols-2">
+                {specs.map(([label, value], i) => (
                   <div
-                    key={line.label}
-                    className="animate-termIn opacity-0"
-                    style={{ animationDelay: `${0.7 + i * 0.2}s` }}
+                    key={label}
+                    className={`px-5 py-4 ${i % 2 === 0 ? "sm:border-e sm:border-line" : ""} ${
+                      i < specs.length - (specs.length % 2 === 0 ? 2 : 1) ? "border-b border-line" : ""
+                    }`}
                   >
-                    <span className="text-bloodBright">✓</span> {line.label}{" "}
-                    {line.note && <span className="text-textFaint">— {line.note}</span>}
+                    <div className="mono ltr mb-1 text-[0.7rem] font-bold tracking-wider text-bloodBright">
+                      {label}
+                    </div>
+                    <div className="text-[0.92rem] text-text">{value}</div>
                   </div>
                 ))}
-                <div className="animate-termIn opacity-0" style={{ animationDelay: "1.95s" }}>
-                  &nbsp;
-                </div>
-                <div className="animate-termIn opacity-0" style={{ animationDelay: "2.1s" }}>
-                  <span className="text-textFaint">
-                    {t("Build complete — 0 errors, 0 warnings.", "Build complete — 0 errors, 0 warnings.")}
-                  </span>
-                </div>
               </div>
             </RevealOnScroll>
 
@@ -108,16 +107,6 @@ export default function Hero() {
               </a>
             </RevealOnScroll>
           </div>
-
-          {/* 3D ID CARD — left side of the section */}
-          <RevealOnScroll className="relative">
-            <span className="mono ltr absolute -top-8 start-1 hidden items-center gap-2 text-[0.78rem] text-textFaint before:content-['//'] before:text-bone/80 sm:inline-flex">
-              {t("بکشش، بچرخونش", "drag it, spin it")}
-            </span>
-            <div className="h-[420px] w-full sm:h-[520px] md:h-[600px]">
-              <SwingBadge />
-            </div>
-          </RevealOnScroll>
         </div>
       </div>
     </section>
