@@ -45,8 +45,8 @@ export default function EditorBar() {
       <div
         className={`flex w-full items-center gap-[22px] transition-all duration-500 ease-out ${
           docked
-            ? "glass max-w-[900px] rounded-full px-4 shadow-glow sm:px-6"
-            : "max-w-none rounded-none border-b border-line bg-black/70 px-5 backdrop-blur-2xl"
+            ? "glass max-w-[900px] rounded-full px-4 shadow-liquid sm:px-6"
+            : "max-w-none rounded-none border-b border-white/10 bg-white/[0.04] px-5 backdrop-blur-2xl"
         } h-14`}
       >
         <Traffic />
@@ -61,8 +61,8 @@ export default function EditorBar() {
               } ${
                 active === tab.id
                   ? docked
-                    ? "text-neon"
-                    : "border-neon text-text"
+                    ? "text-white"
+                    : "border-white text-text"
                   : docked
                   ? "text-textDim hover:text-text"
                   : "border-transparent text-textDim hover:bg-white/[0.04] hover:text-text"
@@ -70,11 +70,11 @@ export default function EditorBar() {
             >
               <span
                 className={`h-1.5 w-1.5 flex-none rounded-full ${
-                  active === tab.id ? "bg-neon shadow-[0_0_8px_2px_var(--neon)]" : "bg-textFaint"
+                  active === tab.id ? "bg-white shadow-[0_0_10px_2px_rgba(255,255,255,.7)]" : "bg-textFaint"
                 }`}
               />
               <span>{t(tab.fa, tab.en)}</span>
-              <span className="mono text-[0.78rem] text-neon">.{tab.ext}</span>
+              <span className="mono text-[0.78rem] text-white">.{tab.ext}</span>
             </a>
           ))}
         </div>
@@ -83,7 +83,7 @@ export default function EditorBar() {
           onClick={toggleLang}
           type="button"
           aria-label="تغییر زبان"
-          className="mono flex flex-none items-center gap-1.5 rounded-full border border-line bg-white/5 px-3.5 py-1.5 text-[0.78rem] font-bold text-text transition-colors hover:border-neon hover:text-neon"
+          className="mono flex flex-none items-center gap-1.5 rounded-full border border-line bg-white/5 px-3.5 py-1.5 text-[0.78rem] font-bold text-text transition-colors hover:border-white/50 hover:text-white"
         >
           <span aria-hidden>🌐</span>
           <span>{lang === "fa" ? "EN" : "فا"}</span>
@@ -98,7 +98,7 @@ export function Traffic() {
     <div className="ltr flex flex-none gap-[7px]">
       <span className="block h-[11px] w-[11px] rounded-full border border-white/20 bg-white" />
       <span className="block h-[11px] w-[11px] rounded-full border border-white/20 bg-white/60" />
-      <span className="block h-[11px] w-[11px] rounded-full border border-neon/60 bg-neon" />
+      <span className="block h-[11px] w-[11px] rounded-full border border-white/50 bg-white" />
     </div>
   );
 }

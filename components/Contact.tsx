@@ -41,9 +41,9 @@ export default function Contact() {
   return (
     <section id="contact" className="relative overflow-hidden py-[120px]">
       <div className="section-divider absolute inset-x-0 top-0" />
-      <div className="glow-blob left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 bg-neon opacity-[.18] animate-pulseGlow" />
+      <div className="glow-blob left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 bg-white opacity-[.06] animate-driftGlow" />
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
-        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-neon">
+        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-white/80">
           ~/moein-fayegh/contact.sh
         </span>
         <h2 className="font-display heading-pop mb-3.5 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-white">
@@ -61,10 +61,10 @@ export default function Contact() {
                 href={c.href}
                 target={c.href.startsWith("http") ? "_blank" : undefined}
                 rel="noopener noreferrer"
-                className="glass flex items-center gap-3 rounded-md2 p-[18px] transition-all hover:-translate-y-1 hover:border-neon hover:shadow-glowSm"
+                className="glass flex items-center gap-3 rounded-md2 p-[18px] transition-all hover:-translate-y-1 hover:border-white/50 hover:shadow-liquidSm"
               >
                 <div className="flex h-[38px] w-[38px] flex-none items-center justify-center rounded-[10px] bg-white/[0.06]">
-                  <svg viewBox="0 0 24 24" className="h-[18px] w-[18px] fill-neon">
+                  <svg viewBox="0 0 24 24" className="h-[18px] w-[18px] fill-white">
                     <path d={c.path} />
                   </svg>
                 </div>

@@ -47,7 +47,7 @@ export default function Experience() {
       <div className="glow-blob -right-[140px] top-10 h-[380px] w-[380px] bg-white opacity-[.05]" />
 
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
-        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-neon">
+        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-white/80">
           ~/moein-fayegh/experience.log
         </span>
         <h2 className="font-display heading-pop mb-3.5 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-white">
@@ -60,16 +60,16 @@ export default function Experience() {
           )}
         </p>
 
-        <div className="relative flex flex-col gap-5 border-r-2 border-neon/40 pr-8 sm:pr-10">
+        <div className="relative flex flex-col gap-5 border-r-2 border-white/25 pr-8 sm:pr-10">
           {JOBS.map((job, i) => (
             <RevealOnScroll key={job.companyEn}>
-              <div className="glass relative rounded-md2 p-5 pb-[22px] transition-all hover:-translate-y-1 hover:border-neon hover:shadow-glowSm">
-                <span className="absolute top-6 -right-[calc(2rem+6px)] h-3 w-3 rounded-full bg-neon shadow-[0_0_14px_4px_var(--neon)] sm:-right-[calc(2.5rem+6px)]" />
+              <div className="glass relative rounded-md2 p-5 pb-[22px] transition-all hover:-translate-y-1 hover:border-white/50 hover:shadow-liquidSm">
+                <span className="absolute top-6 -right-[calc(2rem+6px)] h-3 w-3 rounded-full bg-white shadow-[0_0_14px_4px_rgba(255,255,255,.55)] sm:-right-[calc(2.5rem+6px)]" />
                 <div className="mb-1.5 flex flex-wrap items-center justify-between gap-2">
                   <h4 className="text-[1.05rem] font-extrabold text-text">
                     {t(job.company, job.companyEn)}
                   </h4>
-                  <span className="mono ltr rounded-full border border-neon/40 px-2.5 py-1 text-[0.76rem] text-neon">
+                  <span className="mono ltr rounded-full border border-white/25 px-2.5 py-1 text-[0.76rem] text-white">
                     {t(job.duration, job.durationEn)}
                   </span>
                 </div>

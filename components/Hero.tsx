@@ -30,19 +30,19 @@ export default function Hero() {
   return (
     <section id="hero" className="relative overflow-hidden pb-24 pt-[168px]">
       {/* glow blobs — unique to this section */}
-      <div className="glow-blob -right-[140px] -top-[180px] h-[560px] w-[560px] bg-neon opacity-[.30] animate-pulseGlow" />
-      <div className="glow-blob -bottom-[180px] -left-[120px] h-[460px] w-[460px] bg-neon2 opacity-[.18]" />
+      <div className="glow-blob -right-[140px] -top-[180px] h-[560px] w-[560px] bg-white opacity-[.07] animate-driftGlow" />
+      <div className="glow-blob -bottom-[180px] -left-[120px] h-[460px] w-[460px] bg-white opacity-[.045]" />
       <div className="glow-blob left-1/2 top-10 h-[220px] w-[220px] -translate-x-1/2 bg-white opacity-[.06]" />
 
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
-        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-neon">
+        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-white/80">
           ~/moein-fayegh/index.tsx
         </span>
 
         <RevealOnScroll>
           <h1 className="font-display heading-pop mb-8 text-[clamp(2.6rem,7vw,5.2rem)] font-normal leading-[1.15] text-white">
             {t("معین فایق", "Moein Fayegh")}
-            <span className="mt-3 block text-[clamp(1.2rem,2.6vw,1.9rem)] text-neon">
+            <span className="mt-3 block text-[clamp(1.2rem,2.6vw,1.9rem)] text-white">
               {t("توسعه‌دهنده فول‌استک", "Full-Stack Developer")}
             </span>
           </h1>
@@ -62,7 +62,7 @@ export default function Hero() {
                 ))}
               </div>
               <div className="mono ltr flex-1 whitespace-pre-wrap text-[0.94rem] leading-[2]">
-                <span className="text-neon">const</span> developer{" "}
+                <span className="text-white">const</span> developer{" "}
                 <span className="text-textFaint">=</span> {"{"}
                 <br />
                 &nbsp;&nbsp;name<span className="text-textFaint">:</span>{" "}
@@ -91,20 +91,20 @@ export default function Hero() {
                 </span>
                 <br />
                 {"}"};
-                <span className="ms-0.5 inline-block h-[1.1em] w-2 animate-blink bg-neon align-text-bottom" />
+                <span className="ms-0.5 inline-block h-[1.1em] w-2 animate-blink bg-white align-text-bottom" />
               </div>
             </div>
           </div>
 
           {/* TERMINAL PANE */}
-          <div className="glass-neon overflow-hidden rounded-lg2 shadow-[0_30px_70px_rgba(0,0,0,.6)]">
-            <div className="flex items-center gap-2.5 border-b border-neon/30 bg-white/[0.03] px-4 py-3">
+          <div className="glass-strong overflow-hidden rounded-lg2 shadow-[0_30px_70px_rgba(0,0,0,.6)]">
+            <div className="flex items-center gap-2.5 border-b border-white/20 bg-white/[0.03] px-4 py-3">
               <Traffic />
               <span className="mono ms-1 text-[0.78rem] text-textDim">zsh — build</span>
             </div>
             <div className="mono ltr px-6 py-[26px] text-[0.86rem] leading-[1.95] text-textDim">
               <div className="animate-termIn opacity-0" style={{ animationDelay: ".1s" }}>
-                <span className="text-neon">➜</span>{" "}
+                <span className="text-white">➜</span>{" "}
                 <b className="font-semibold text-text">npm run introduce</b>
               </div>
               <div className="animate-termIn opacity-0" style={{ animationDelay: ".5s" }}>
@@ -116,7 +116,7 @@ export default function Hero() {
                   className="animate-termIn opacity-0"
                   style={{ animationDelay: `${0.7 + i * 0.2}s` }}
                 >
-                  <span className="text-neon">✓</span> {line.label}{" "}
+                  <span className="text-white">✓</span> {line.label}{" "}
                   {line.note && <span className="text-textFaint">— {line.note}</span>}
                 </div>
               ))}
@@ -135,13 +135,13 @@ export default function Hero() {
         <RevealOnScroll className="mt-[26px] flex flex-wrap gap-3.5">
           <a
             href="#projects"
-            className="mono inline-flex items-center gap-2 rounded-sm2 bg-white px-6 py-3.5 text-[0.9rem] font-extrabold text-black transition-transform hover:-translate-y-0.5 hover:shadow-glow"
+            className="mono inline-flex items-center gap-2 rounded-sm2 bg-white px-6 py-3.5 text-[0.9rem] font-extrabold text-black transition-transform hover:-translate-y-0.5 hover:shadow-liquid"
           >
             {t("مشاهده نمونه‌کارها", "View Projects")}
           </a>
           <a
             href="#contact"
-            className="mono glass inline-flex items-center gap-2 rounded-sm2 px-6 py-3.5 text-[0.9rem] font-extrabold text-text transition-colors hover:border-neon hover:text-neon"
+            className="mono glass inline-flex items-center gap-2 rounded-sm2 px-6 py-3.5 text-[0.9rem] font-extrabold text-text transition-colors hover:border-white/50 hover:text-white"
           >
             {t("شروع همکاری", "Start a Project")}
           </a>

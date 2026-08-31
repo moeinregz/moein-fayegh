@@ -63,7 +63,7 @@ export default function ContactForm() {
       <div className="mono ltr mb-5 border-b border-line pb-4 text-[0.82rem] text-textFaint">
         $ contact --send{" "}
         <span className="opacity-50">
-          // <b className="text-neon">{t("پر کردن فرم زیر", "fill the form below")}</b>
+          // <b className="text-white">{t("پر کردن فرم زیر", "fill the form below")}</b>
         </span>
       </div>
 
@@ -83,7 +83,7 @@ export default function ContactForm() {
           name="name"
           required
           placeholder={t("نام شما", "Your name")}
-          className="w-full rounded-sm2 border border-line bg-black/60 px-3.5 py-3 text-[0.95rem] text-text transition-colors focus:border-neon focus:outline-none focus:shadow-glowSm"
+          className="w-full rounded-sm2 border border-line bg-black/60 px-3.5 py-3 text-[0.95rem] text-text transition-colors focus:border-white/50 focus:outline-none focus:shadow-liquidSm"
         />
       </Field>
 
@@ -93,7 +93,7 @@ export default function ContactForm() {
           name="phone"
           required
           placeholder={t("شماره تماس", "Phone number")}
-          className="w-full rounded-sm2 border border-line bg-black/60 px-3.5 py-3 text-[0.95rem] text-text transition-colors focus:border-neon focus:outline-none focus:shadow-glowSm"
+          className="w-full rounded-sm2 border border-line bg-black/60 px-3.5 py-3 text-[0.95rem] text-text transition-colors focus:border-white/50 focus:outline-none focus:shadow-liquidSm"
         />
       </Field>
 
@@ -102,7 +102,7 @@ export default function ContactForm() {
           type="email"
           name="email"
           placeholder={t("ایمیل", "Email")}
-          className="w-full rounded-sm2 border border-line bg-black/60 px-3.5 py-3 text-[0.95rem] text-text transition-colors focus:border-neon focus:outline-none focus:shadow-glowSm"
+          className="w-full rounded-sm2 border border-line bg-black/60 px-3.5 py-3 text-[0.95rem] text-text transition-colors focus:border-white/50 focus:outline-none focus:shadow-liquidSm"
         />
       </Field>
 
@@ -112,20 +112,20 @@ export default function ContactForm() {
           required
           rows={4}
           placeholder={t("درباره پروژه‌تون بگید...", "Tell me about your project...")}
-          className="w-full resize-y rounded-sm2 border border-line bg-black/60 px-3.5 py-3 text-[0.95rem] text-text transition-colors focus:border-neon focus:outline-none focus:shadow-glowSm"
+          className="w-full resize-y rounded-sm2 border border-line bg-black/60 px-3.5 py-3 text-[0.95rem] text-text transition-colors focus:border-white/50 focus:outline-none focus:shadow-liquidSm"
         />
       </Field>
 
       <button
         type="submit"
         disabled={status === "sending"}
-        className="mono mt-1.5 w-full rounded-sm2 bg-white py-3.5 text-[0.92rem] font-extrabold text-black transition-transform hover:-translate-y-0.5 hover:shadow-glow disabled:cursor-not-allowed disabled:opacity-60"
+        className="mono mt-1.5 w-full rounded-sm2 bg-white py-3.5 text-[0.92rem] font-extrabold text-black transition-transform hover:-translate-y-0.5 hover:shadow-liquid disabled:cursor-not-allowed disabled:opacity-60"
       >
         {status === "sending" ? t("در حال ارسال...", "Sending...") : "$ send-request"}
       </button>
 
       {status === "success" && (
-        <p className="mono ltr mt-3 text-[0.82rem] text-neon" role="status">
+        <p className="mono ltr mt-3 text-[0.82rem] text-white" role="status">
           ✓ {t("پیامتون ذخیره شد، به‌زودی جواب می‌دم.", "Message saved — I'll get back to you soon.")}
         </p>
       )}
@@ -141,7 +141,7 @@ export default function ContactForm() {
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="mb-4">
-      <label className="mono ltr mb-[7px] flex items-center gap-1.5 text-[0.78rem] text-textFaint before:content-['>'] before:text-neon">
+      <label className="mono ltr mb-[7px] flex items-center gap-1.5 text-[0.78rem] text-textFaint before:content-['>'] before:text-white/80">
         {label}
       </label>
       {children}

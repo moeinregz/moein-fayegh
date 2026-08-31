@@ -274,10 +274,10 @@ export default function Projects() {
   return (
     <section id="projects" className="relative overflow-hidden py-[120px]">
       <div className="section-divider absolute inset-x-0 top-0" />
-      <div className="glow-blob -right-[100px] top-1/4 h-[400px] w-[400px] bg-neon opacity-[.16]" />
-      <div className="glow-blob -left-[140px] bottom-0 h-[380px] w-[380px] bg-neon2 opacity-[.14]" />
+      <div className="glow-blob -right-[100px] top-1/4 h-[400px] w-[400px] bg-white opacity-[.045]" />
+      <div className="glow-blob -left-[140px] bottom-0 h-[380px] w-[380px] bg-white opacity-[.04]" />
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
-        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-neon">
+        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-white/80">
           ~/moein-fayegh/projects.tsx
         </span>
         <h2 className="font-display heading-pop mb-3.5 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-white">
@@ -295,9 +295,9 @@ export default function Projects() {
               href={p.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group glass-neon relative flex flex-col overflow-hidden rounded-lg2 transition-all hover:-translate-y-1.5 hover:shadow-glow"
+              className="group glass-strong relative flex flex-col overflow-hidden rounded-lg2 transition-all hover:-translate-y-1.5 hover:shadow-liquid"
             >
-              <span className="mono absolute right-4 top-4 z-10 rounded-full border border-neon/60 bg-black/70 px-2.5 py-1 text-[0.7rem] font-bold text-neon backdrop-blur">
+              <span className="mono absolute right-4 top-4 z-10 rounded-full border border-white/50 bg-black/70 px-2.5 py-1 text-[0.7rem] font-bold text-white backdrop-blur">
                 {t("پروژه ویژه", "Featured")}
               </span>
               <div className="flex items-center gap-2.5 border-b border-line bg-white/[0.03] px-3.5 py-[11px]">
@@ -312,7 +312,7 @@ export default function Projects() {
               <div className="flex flex-1 flex-col p-5 pb-6">
                 <h3 className="mb-2 text-[1.12rem] font-bold">{t(p.titleFa, p.titleEn)}</h3>
                 <p className="mb-[18px] flex-1 text-[0.87rem] text-textDim">{t(p.descFa, p.descEn)}</p>
-                <span className="mono ltr inline-flex items-center gap-1.5 text-[0.83rem] font-semibold text-neon transition-all group-hover:gap-2.5">
+                <span className="mono ltr inline-flex items-center gap-1.5 text-[0.83rem] font-semibold text-white transition-all group-hover:gap-2.5">
                   <span aria-hidden>→</span>
                   {t("مشاهده سایت", "View Website")}
                 </span>
@@ -329,7 +329,7 @@ export default function Projects() {
               href={`/samples/${p.slug}.html`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group glass flex flex-col overflow-hidden rounded-lg2 transition-all hover:-translate-y-1.5 hover:border-neon hover:shadow-glowSm"
+              className="group glass flex flex-col overflow-hidden rounded-lg2 transition-all hover:-translate-y-1.5 hover:border-white/50 hover:shadow-liquidSm"
             >
               <div className="flex items-center gap-2.5 border-b border-line bg-white/[0.03] px-3.5 py-[11px]">
                 <Traffic />
@@ -349,7 +349,7 @@ export default function Projects() {
               <div className="flex flex-1 flex-col p-5 pb-6">
                 <h3 className="mb-2 text-[1.08rem] font-bold">{t(p.titleFa, p.titleEn)}</h3>
                 <p className="mb-[18px] flex-1 text-[0.87rem] text-textDim">{t(p.descFa, p.descEn)}</p>
-                <span className="mono ltr inline-flex items-center gap-1.5 text-[0.83rem] font-semibold text-neon transition-all group-hover:gap-2.5">
+                <span className="mono ltr inline-flex items-center gap-1.5 text-[0.83rem] font-semibold text-white transition-all group-hover:gap-2.5">
                   <span aria-hidden>→</span>
                   {t("مشاهده نمونه", "View Sample")}
                 </span>

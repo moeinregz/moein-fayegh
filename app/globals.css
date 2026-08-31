@@ -6,8 +6,6 @@
   --font-vazirmatn: "Vazirmatn", sans-serif;
   --font-lalezar: "Lalezar", "Vazirmatn", sans-serif;
   --font-jetbrains: "JetBrains Mono", "Courier New", monospace;
-  --neon: #b026ff;
-  --neon2: #7000ff;
 }
 
 html {
@@ -24,8 +22,8 @@ body {
 }
 
 ::selection {
-  background: var(--neon);
-  color: #ffffff;
+  background: #ffffff;
+  color: #000000;
 }
 
 /* code / latin content always reads LTR regardless of page language */
@@ -75,22 +73,53 @@ body {
   transform: none;
 }
 
-/* ---------- glass panels ---------- */
+/* ---------- liquid glass panels ---------- */
 .glass {
-  background: rgba(255, 255, 255, 0.045);
-  backdrop-filter: blur(22px) saturate(140%);
-  -webkit-backdrop-filter: blur(22px) saturate(140%);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -22px 30px -22px rgba(255, 255, 255, 0.06);
+  transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+}
+.glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(120% 60% at 12% -10%, rgba(255, 255, 255, 0.3), transparent 60%);
+  pointer-events: none;
+}
+.glass:hover {
+  border-color: rgba(255, 255, 255, 0.34);
 }
 
-.glass-neon {
-  background: rgba(176, 38, 255, 0.08);
-  backdrop-filter: blur(22px) saturate(160%);
-  -webkit-backdrop-filter: blur(22px) saturate(160%);
-  border: 1px solid rgba(176, 38, 255, 0.35);
+/* slightly heavier variant for panes that need to read as "on top" */
+.glass-strong {
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.03));
+  backdrop-filter: blur(34px) saturate(180%);
+  -webkit-backdrop-filter: blur(34px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -26px 34px -22px rgba(255, 255, 255, 0.08);
+}
+.glass-strong::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(120% 60% at 12% -10%, rgba(255, 255, 255, 0.4), transparent 60%);
+  pointer-events: none;
 }
 
-/* ---------- glowing section divider — "خط خفن" ---------- */
+/* ---------- glowing section divider — soft liquid seam between sections ---------- */
 .section-divider {
   position: relative;
   height: 1px;
@@ -99,48 +128,45 @@ body {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.5) 20%,
-    var(--neon) 50%,
-    rgba(255, 255, 255, 0.5) 80%,
+    rgba(255, 255, 255, 0.55) 50%,
     transparent 100%
   );
 }
 .section-divider::after {
   content: "";
   position: absolute;
-  inset: -8px 0 auto 0;
-  height: 16px;
+  inset: -10px 0 auto 0;
+  height: 20px;
   background: inherit;
-  filter: blur(12px);
-  opacity: 0.9;
+  filter: blur(14px);
+  opacity: 0.7;
 }
 .section-divider::before {
   content: "";
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
   border-radius: 999px;
   background: #fff;
-  box-shadow: 0 0 12px 3px var(--neon), 0 0 24px 6px var(--neonSoft, rgba(176,38,255,.6));
+  box-shadow: 0 0 16px 4px rgba(255, 255, 255, 0.75), 0 0 30px 10px rgba(255, 255, 255, 0.25);
   transform: translate(-50%, -50%);
 }
 
-/* ---------- neon glow blobs used inside sections ---------- */
+/* ---------- soft ambient blobs used inside sections (monochrome only) ---------- */
 .glow-blob {
   position: absolute;
   border-radius: 999px;
   pointer-events: none;
-  filter: blur(90px);
+  filter: blur(100px);
   z-index: 0;
+  background: #ffffff;
 }
 
 /* ---------- puffy / embossed heading treatment ---------- */
 .heading-pop {
-  text-shadow:
-    0 0 18px rgba(176, 38, 255, 0.35),
-    0 2px 0 rgba(255, 255, 255, 0.06);
+  text-shadow: 0 2px 30px rgba(255, 255, 255, 0.22), 0 2px 0 rgba(255, 255, 255, 0.06);
 }
 
 .text-outline {

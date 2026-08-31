@@ -20,10 +20,10 @@ export default function About() {
   return (
     <section id="about" className="relative overflow-hidden py-[120px]">
       <div className="section-divider absolute inset-x-0 top-0" />
-      <div className="glow-blob -left-[160px] top-1/3 h-[420px] w-[420px] bg-neon2 opacity-[.20]" />
+      <div className="glow-blob -left-[160px] top-1/3 h-[420px] w-[420px] bg-white opacity-[.05]" />
 
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
-        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-neon">
+        <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-white/80">
           ~/moein-fayegh/about.tsx
         </span>
         <h2 className="font-display heading-pop mb-3.5 text-[clamp(2rem,4.4vw,3.4rem)] font-normal text-white">
@@ -62,7 +62,7 @@ export default function About() {
               <br />
               &nbsp;&nbsp;<span className="text-white">&quot;name&quot;</span>
               <span className="text-textFaint">:</span>{" "}
-              <span className="text-neon">&quot;moein-fayegh&quot;</span>,
+              <span className="text-white">&quot;moein-fayegh&quot;</span>,
               <br />
               &nbsp;&nbsp;<span className="text-white">&quot;dependencies&quot;</span>
               <span className="text-textFaint">:</span> {"{"}
@@ -72,7 +72,7 @@ export default function About() {
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <span className="text-white">&quot;{key}&quot;</span>
                   <span className="text-textFaint">:</span>{" "}
-                  <span className="text-neon">&quot;{val}&quot;</span>
+                  <span className="text-white">&quot;{val}&quot;</span>
                   {i < DEPS.length - 1 ? "," : ""}
                 </div>
               ))}
@@ -90,7 +90,7 @@ export default function About() {
 function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div>
-      <b className="font-display block text-[1.9rem] font-normal text-neon">{value}</b>
+      <b className="font-display block text-[1.9rem] font-normal text-white">{value}</b>
       <span className="text-[0.82rem] text-textFaint">{label}</span>
     </div>
   );

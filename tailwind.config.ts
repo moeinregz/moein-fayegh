@@ -12,19 +12,18 @@ const config: Config = {
         panel: "#0a0a0a",
         panel2: "#101010",
         panel3: "#161616",
-        line: "rgba(255,255,255,.14)",
-        lineSoft: "rgba(255,255,255,.07)",
-        neon: "#b026ff",
-        neon2: "#7000ff",
-        neonSoft: "rgba(176,38,255,.5)",
+        line: "rgba(255,255,255,.16)",
+        lineSoft: "rgba(255,255,255,.08)",
         rose: "#ff5577",
         text: "#ffffff",
         textDim: "#b7b7c2",
         textFaint: "#6a6a75",
-        // legacy aliases kept so nothing silently breaks
+        // legacy aliases kept so nothing silently breaks — everything reads as white now
         amber: "#ffffff",
-        mint: "#b026ff",
-        violet: "#b026ff",
+        mint: "#ffffff",
+        violet: "#ffffff",
+        neon: "#ffffff",
+        neon2: "#ffffff",
       },
       fontFamily: {
         sans: ["var(--font-vazirmatn)", "sans-serif"],
@@ -37,27 +36,24 @@ const config: Config = {
         sm2: "11px",
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(176,38,255,.35), 0 0 40px rgba(176,38,255,.25), 0 0 90px rgba(176,38,255,.12)",
-        glowSm: "0 0 0 1px rgba(176,38,255,.3), 0 0 18px rgba(176,38,255,.28)",
-        glowWhite: "0 0 40px rgba(255,255,255,.12)",
+        liquid:
+          "0 24px 60px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.35), inset 0 -22px 30px -22px rgba(255,255,255,.06)",
+        liquidSm:
+          "0 10px 26px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.3)",
+        glowWhite: "0 0 50px rgba(255,255,255,.14)",
       },
       keyframes: {
         blink: { "50%": { opacity: "0" } },
         termIn: { to: { opacity: "1" } },
-        pulseGlow: {
-          "0%,100%": { opacity: "0.55", transform: "scale(1)" },
-          "50%": { opacity: "1", transform: "scale(1.06)" },
-        },
-        floatY: {
-          "0%,100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
+        driftGlow: {
+          "0%,100%": { opacity: "0.5", transform: "translateY(0) scale(1)" },
+          "50%": { opacity: "0.9", transform: "translateY(-14px) scale(1.05)" },
         },
       },
       animation: {
         blink: "blink 1s steps(1) infinite",
         termIn: "termIn .45s ease forwards",
-        pulseGlow: "pulseGlow 4.5s ease-in-out infinite",
-        floatY: "floatY 6s ease-in-out infinite",
+        driftGlow: "driftGlow 7s ease-in-out infinite",
       },
     },
   },
