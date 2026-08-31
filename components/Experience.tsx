@@ -43,7 +43,7 @@ export default function Experience() {
   const t = useT();
 
   return (
-    <section id="experience" className="bg-arl-red bg-xmarks arl-seam-top relative overflow-hidden py-[120px]">
+    <section id="experience" className="bg-arl-red bg-xmarks-dark arl-seam-top relative overflow-hidden py-[120px]">
       <XMark className="x-watermark-dark -right-16 top-4 h-[320px] w-[320px] rotate-[14deg]" />
       <XMark className="x-watermark-dark -left-10 bottom-0 h-[190px] w-[190px] -rotate-[8deg]" />
 

@@ -49,7 +49,7 @@ export default function Skills() {
   const t = useT();
 
   return (
-    <section id="skills" className="bg-arl-grey bg-xmarks arl-seam-top relative overflow-hidden py-[120px]">
+    <section id="skills" className="bg-arl-grey bg-xmarks-sm arl-seam-top relative overflow-hidden py-[120px]">
       <div className="section-divider absolute inset-x-0 top-0" />
       <div className="bg-blueprint absolute inset-0" />
       <XMark className="x-watermark -right-14 top-0 h-[260px] w-[260px] rotate-[9deg]" />

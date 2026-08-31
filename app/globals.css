@@ -174,26 +174,116 @@ html {
 
 /* ---------- scattered blood-cross motif — tiled X pattern for section backgrounds ----------
    Echoes the small crimson X-scars repeated across the reference art
-   (cheek, brow, fingers). Tiled as a flat, matte texture — no blur, no glow —
-   using two crossed strokes per tile so it reads as an "X", not dots. */
+   (cheek, brow, fingers). Applied evenly across the whole section — no
+   mask/fade — so the top and bottom read the same instead of the bottom
+   going dull once the pattern fades out. Three size variants so no two
+   sections in a row look identical. */
 .bg-xmarks {
   background-image: repeating-linear-gradient(
       45deg,
-      rgba(160, 17, 40, 0.16) 0,
-      rgba(160, 17, 40, 0.16) 3px,
+      rgba(160, 17, 40, 0.14) 0,
+      rgba(160, 17, 40, 0.14) 3px,
       transparent 3px,
-      transparent 96px
+      transparent 84px
     ),
     repeating-linear-gradient(
       -45deg,
-      rgba(160, 17, 40, 0.16) 0,
-      rgba(160, 17, 40, 0.16) 3px,
+      rgba(160, 17, 40, 0.14) 0,
+      rgba(160, 17, 40, 0.14) 3px,
       transparent 3px,
-      transparent 96px
+      transparent 84px
     );
-  background-position: 0 0, 0 0;
-  -webkit-mask-image: radial-gradient(ellipse 90% 75% at 50% 40%, #000 30%, transparent 100%);
-  mask-image: radial-gradient(ellipse 90% 75% at 50% 40%, #000 30%, transparent 100%);
+}
+
+/* wider spacing, sparser crosses */
+.bg-xmarks-lg {
+  background-image: repeating-linear-gradient(
+      45deg,
+      rgba(160, 17, 40, 0.13) 0,
+      rgba(160, 17, 40, 0.13) 3px,
+      transparent 3px,
+      transparent 132px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(160, 17, 40, 0.13) 0,
+      rgba(160, 17, 40, 0.13) 3px,
+      transparent 3px,
+      transparent 132px
+    );
+  background-position: 30px 0, 30px 0;
+}
+
+/* tighter spacing, steeper angles — reads as a different weave */
+.bg-xmarks-sm {
+  background-image: repeating-linear-gradient(
+      60deg,
+      rgba(160, 17, 40, 0.12) 0,
+      rgba(160, 17, 40, 0.12) 2.5px,
+      transparent 2.5px,
+      transparent 58px
+    ),
+    repeating-linear-gradient(
+      -60deg,
+      rgba(160, 17, 40, 0.12) 0,
+      rgba(160, 17, 40, 0.12) 2.5px,
+      transparent 2.5px,
+      transparent 58px
+    );
+}
+
+/* dark variant of the above three — for use on blood-red section
+   backgrounds, where crimson lines would blend into the red instead of
+   reading as a pattern */
+.bg-xmarks-dark {
+  background-image: repeating-linear-gradient(
+      45deg,
+      rgba(20, 20, 22, 0.22) 0,
+      rgba(20, 20, 22, 0.22) 3px,
+      transparent 3px,
+      transparent 84px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(20, 20, 22, 0.22) 0,
+      rgba(20, 20, 22, 0.22) 3px,
+      transparent 3px,
+      transparent 84px
+    );
+}
+.bg-xmarks-dark-lg {
+  background-image: repeating-linear-gradient(
+      60deg,
+      rgba(20, 20, 22, 0.2) 0,
+      rgba(20, 20, 22, 0.2) 2.5px,
+      transparent 2.5px,
+      transparent 130px
+    ),
+    repeating-linear-gradient(
+      -60deg,
+      rgba(20, 20, 22, 0.2) 0,
+      rgba(20, 20, 22, 0.2) 2.5px,
+      transparent 2.5px,
+      transparent 130px
+    );
+}
+
+/* widest spacing — most sparse, for a fourth distinct rhythm */
+.bg-xmarks-xl {
+  background-image: repeating-linear-gradient(
+      30deg,
+      rgba(160, 17, 40, 0.13) 0,
+      rgba(160, 17, 40, 0.13) 3px,
+      transparent 3px,
+      transparent 172px
+    ),
+    repeating-linear-gradient(
+      -30deg,
+      rgba(160, 17, 40, 0.13) 0,
+      rgba(160, 17, 40, 0.13) 3px,
+      transparent 3px,
+      transparent 172px
+    );
 }
 
 /* ---------- distinctive section backgrounds (monochrome, subtle) ---------- */

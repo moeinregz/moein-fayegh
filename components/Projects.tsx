@@ -278,7 +278,7 @@ export default function Projects() {
   const visibleSamples = showAll ? SAMPLE_PROJECTS : SAMPLE_PROJECTS.slice(0, SAMPLE_PREVIEW_COUNT);
 
   return (
-    <section id="projects" className="bg-arl-black bg-xmarks arl-seam-top relative overflow-hidden py-[120px]">
+    <section id="projects" className="bg-arl-black bg-xmarks-xl arl-seam-top relative overflow-hidden py-[120px]">
       <div className="bg-hatch absolute inset-0" />
       <XMark className="x-watermark -right-12 top-1/4 h-[300px] w-[300px] rotate-[11deg]" />
       <XMark className="x-watermark -left-20 bottom-0 h-[240px] w-[240px] -rotate-[9deg]" />

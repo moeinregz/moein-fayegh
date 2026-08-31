@@ -19,7 +19,7 @@ export default function About() {
   const t = useT();
 
   return (
-    <section id="about" className="bg-arl-grey bg-xmarks arl-seam-top relative overflow-hidden py-[120px]">
+    <section id="about" className="bg-arl-grey bg-xmarks-lg arl-seam-top relative overflow-hidden py-[120px]">
       <div className="bg-scanlines absolute inset-0" />
       <XMark className="x-watermark -left-20 top-6 h-[300px] w-[300px] -rotate-[10deg]" />
       <XMark className="x-watermark -right-10 bottom-0 h-[180px] w-[180px] rotate-[16deg]" />
