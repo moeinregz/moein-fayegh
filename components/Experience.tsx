@@ -43,8 +43,9 @@ export default function Experience() {
   const t = useT();
 
   return (
-    <section id="experience" className="bg-arl-red arl-seam-top relative overflow-hidden py-[120px]">
-      <div className="glow-blob -right-[140px] top-10 h-[380px] w-[380px] bg-blood opacity-[.08]" />
+    <section id="experience" className="bg-arl-red bg-xmarks arl-seam-top relative overflow-hidden py-[120px]">
+      <XMark className="x-watermark-dark -right-16 top-4 h-[320px] w-[320px] rotate-[14deg]" />
+      <XMark className="x-watermark-dark -left-10 bottom-0 h-[190px] w-[190px] -rotate-[8deg]" />
 
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
         <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-bone/80">

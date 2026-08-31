@@ -19,9 +19,10 @@ export default function About() {
   const t = useT();
 
   return (
-    <section id="about" className="bg-arl-grey arl-seam-top relative overflow-hidden py-[120px]">
+    <section id="about" className="bg-arl-grey bg-xmarks arl-seam-top relative overflow-hidden py-[120px]">
       <div className="bg-scanlines absolute inset-0" />
-      <div className="glow-blob -left-[160px] top-1/3 h-[420px] w-[420px] bg-blood opacity-[.08]" />
+      <XMark className="x-watermark -left-20 top-6 h-[300px] w-[300px] -rotate-[10deg]" />
+      <XMark className="x-watermark -right-10 bottom-0 h-[180px] w-[180px] rotate-[16deg]" />
 
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
         <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-bone/80">

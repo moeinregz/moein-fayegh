@@ -29,13 +29,10 @@ export default function Hero() {
   const lines = lang === "fa" ? TERM_LINES_FA : TERM_LINES_EN;
 
   return (
-    <section id="hero" className="bg-arl-black relative overflow-hidden pb-24 pt-[168px]">
-      {/* glow blobs — unique to this section */}
-      <div className="glow-blob -bottom-[180px] -left-[120px] h-[460px] w-[460px] bg-blood opacity-[.08]" />
-      <div className="glow-blob left-1/2 top-10 h-[220px] w-[220px] -translate-x-1/2 bg-ash opacity-[.06]" />
-
-      {/* large faint X-mark watermark, echoing the crossed eye-scar motif */}
+    <section id="hero" className="bg-arl-black bg-xmarks relative overflow-hidden pb-24 pt-[168px]">
+      {/* large faint X-mark watermarks, echoing the crossed eye-scar motif */}
       <XMark className="x-watermark -right-16 top-8 h-[420px] w-[420px] rotate-[8deg] sm:-right-10" />
+      <XMark className="x-watermark -left-24 -bottom-16 h-[260px] w-[260px] -rotate-[12deg]" />
 
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
         <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-bone/80">

@@ -278,10 +278,10 @@ export default function Projects() {
   const visibleSamples = showAll ? SAMPLE_PROJECTS : SAMPLE_PROJECTS.slice(0, SAMPLE_PREVIEW_COUNT);
 
   return (
-    <section id="projects" className="bg-arl-black arl-seam-top relative overflow-hidden py-[120px]">
+    <section id="projects" className="bg-arl-black bg-xmarks arl-seam-top relative overflow-hidden py-[120px]">
       <div className="bg-hatch absolute inset-0" />
-      <div className="glow-blob -right-[100px] top-1/4 h-[400px] w-[400px] bg-blood opacity-[.07]" />
-      <div className="glow-blob -left-[140px] bottom-0 h-[380px] w-[380px] bg-ash opacity-[.04]" />
+      <XMark className="x-watermark -right-12 top-1/4 h-[300px] w-[300px] rotate-[11deg]" />
+      <XMark className="x-watermark -left-20 bottom-0 h-[240px] w-[240px] -rotate-[9deg]" />
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
         <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-bone/80">
           ~/moein-fayegh/projects.tsx

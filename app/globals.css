@@ -172,6 +172,30 @@ html {
     );
 }
 
+/* ---------- scattered blood-cross motif — tiled X pattern for section backgrounds ----------
+   Echoes the small crimson X-scars repeated across the reference art
+   (cheek, brow, fingers). Tiled as a flat, matte texture — no blur, no glow —
+   using two crossed strokes per tile so it reads as an "X", not dots. */
+.bg-xmarks {
+  background-image: repeating-linear-gradient(
+      45deg,
+      rgba(160, 17, 40, 0.16) 0,
+      rgba(160, 17, 40, 0.16) 3px,
+      transparent 3px,
+      transparent 96px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(160, 17, 40, 0.16) 0,
+      rgba(160, 17, 40, 0.16) 3px,
+      transparent 3px,
+      transparent 96px
+    );
+  background-position: 0 0, 0 0;
+  -webkit-mask-image: radial-gradient(ellipse 90% 75% at 50% 40%, #000 30%, transparent 100%);
+  mask-image: radial-gradient(ellipse 90% 75% at 50% 40%, #000 30%, transparent 100%);
+}
+
 /* ---------- distinctive section backgrounds (monochrome, subtle) ---------- */
 
 /* blueprint-style fine grid — used behind the Skills section */
@@ -259,6 +283,16 @@ html {
   z-index: 0;
   color: #a01128;
   opacity: 0.16;
+}
+
+/* dark variant — used on blood-red section backgrounds, where the
+   default crimson watermark would blend into the red instead of reading */
+.x-watermark-dark {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  color: #141416;
+  opacity: 0.22;
 }
 
 .glow-blood {

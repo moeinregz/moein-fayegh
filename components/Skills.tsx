@@ -49,10 +49,11 @@ export default function Skills() {
   const t = useT();
 
   return (
-    <section id="skills" className="bg-arl-grey arl-seam-top relative overflow-hidden py-[120px]">
+    <section id="skills" className="bg-arl-grey bg-xmarks arl-seam-top relative overflow-hidden py-[120px]">
       <div className="section-divider absolute inset-x-0 top-0" />
       <div className="bg-blueprint absolute inset-0" />
-      <div className="glow-blob -left-[120px] bottom-0 h-[420px] w-[420px] bg-blood opacity-[.08]" />
+      <XMark className="x-watermark -right-14 top-0 h-[260px] w-[260px] rotate-[9deg]" />
+      <XMark className="x-watermark -left-16 bottom-4 h-[220px] w-[220px] -rotate-[14deg]" />
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
         <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-bone/80">
           ~/moein-fayegh/skills.json

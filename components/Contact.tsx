@@ -40,8 +40,10 @@ export default function Contact() {
   const t = useT();
 
   return (
-    <section id="contact" className="bg-arl-red arl-seam-top relative overflow-hidden py-[120px]">
+    <section id="contact" className="bg-arl-red bg-xmarks arl-seam-top relative overflow-hidden py-[120px]">
       <div className="bg-harlequin absolute inset-0" />
+      <XMark className="x-watermark-dark -right-16 top-6 h-[280px] w-[280px] -rotate-[11deg]" />
+      <XMark className="x-watermark-dark -left-14 bottom-0 h-[200px] w-[200px] rotate-[13deg]" />
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
         <span className="mono ltr mb-[18px] inline-flex items-center gap-2 text-[0.8rem] text-textFaint before:content-['//'] before:text-bone/80">
           ~/moein-fayegh/contact.sh
