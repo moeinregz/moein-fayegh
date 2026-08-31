@@ -4,7 +4,7 @@ import { useLanguage, useT } from "@/components/Providers";
 import { Traffic } from "@/components/EditorBar";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { XMark } from "@/components/XMark";
-import LanyardSection from "@/components/lanyard/LanyardSection";
+import SwingBadge from "@/components/hero/SwingBadge";
 
 const TERM_LINES_FA = [
   { ok: true, label: "React", note: "رابط کاربری" },
@@ -115,7 +115,7 @@ export default function Hero() {
               {t("بکشش، بچرخونش", "drag it, spin it")}
             </span>
             <div className="h-[420px] w-full sm:h-[520px] md:h-[600px]">
-              <LanyardSection />
+              <SwingBadge />
             </div>
           </RevealOnScroll>
         </div>
